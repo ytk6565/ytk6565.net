@@ -49,7 +49,7 @@ export default Vue.extend<Data, Methods, Computed, Props>({
         },
         gitHub: {
           url: 'https://github.com/ytk6565',
-          src: require('~/assets/image/logo-gitHub.png'),
+          src: require('~/assets/image/logo-github.png'),
           alt: 'GitHub',
           width: 300,
           height: 300,
