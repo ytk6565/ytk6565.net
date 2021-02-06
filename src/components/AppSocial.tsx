@@ -1,25 +1,4 @@
-<template>
-  <ul :class="$style.root">
-    <li
-      v-for="({ url, src, alt, width, height }, key) in links"
-      :key="key"
-      :class="$style.item"
-    >
-      <a :href="url" :class="$style.link">
-        <img
-          :src="src"
-          :alt="alt"
-          :width="width"
-          :height="height"
-          :class="$style.icon"
-        />
-      </a>
-    </li>
-  </ul>
-</template>
-
-<script lang="ts">
-import Vue from 'vue'
+import * as tsx from 'vue-tsx-support'
 
 type Link = {
   url: string
@@ -29,16 +8,10 @@ type Link = {
   height: number
 }
 
-type Data = {}
-type Methods = {}
-type Computed = {
-  links: { [k: string]: Link }
-}
-type Props = {}
-
-export default Vue.extend<Data, Methods, Computed, Props>({
+export const AppSocial = tsx.component({
+  name: 'AppSocial',
   computed: {
-    links() {
+    links(): { [k: string]: Link } {
       return {
         twitter: {
           url: 'https://twitter.com/ytk6565',
@@ -71,30 +44,32 @@ export default Vue.extend<Data, Methods, Computed, Props>({
       }
     },
   },
+  render() {
+    return (
+      <ul class={'flex items-center justify-center -ml-8 -mr-8'}>
+        {Object.keys(this.links).map((key) => {
+          const link = this.links[key]
+
+          return (
+            <li class={['ml-8', 'mr-8']}>
+              <a
+                href={link.url}
+                target="_black"
+                rel="noopener"
+                class={['btn-opacity', 'block', 'w-40', 'h-40', 'btn-opacity']}
+              >
+                <img
+                  src={link.src}
+                  alt={link.alt}
+                  width={link.width}
+                  height={link.height}
+                  class={['block', 'w-full', 'h-auto']}
+                />
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    )
+  },
 })
-</script>
-
-<style module>
-.root {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-}
-
-.item + .item {
-  margin-left: 1rem;
-}
-
-.link {
-  display: block;
-  width: 3rem;
-  height: 3rem;
-}
-
-.icon {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-}
-</style>

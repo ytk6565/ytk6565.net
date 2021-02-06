@@ -1,0 +1,52 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@layer base {
+  h1, h2 , h3, h4, h5, h6 {
+    @apply text-black;
+    @apply font-bold;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @apply bg-white;
+  @apply text-base;
+  @apply text-gray;
+}
+
+.container {
+  width: 768px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#__nuxt {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.btn-opacity {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+@media (hover: none) {
+  .btn-opacity:active {
+    opacity: 0.5;
+  }
+}
+
+@media (hover: hover) {
+  .btn-opacity:hover {
+    opacity: 0.5;
+  }
+}

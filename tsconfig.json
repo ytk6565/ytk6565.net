@@ -1,21 +1,43 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
+    "jsx": "preserve",
+    "jsxFactory": "h",
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "@/*": ["./src/*"]
+      "~/*": [
+        "./src/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "types": ["@types/node", "@nuxt/types", "./types/declarations/index.d.ts"]
+    "types": [
+      "@types/node",
+      "@nuxt/types",
+    ]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "include": [
+    "node_modules/vue-tsx-support/enable-check.d.ts",
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    "dist"
+  ]
 }
