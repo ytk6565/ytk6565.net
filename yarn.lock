@@ -912,6 +912,13 @@
     methods "^1.1.2"
     path-to-regexp "^6.1.0"
 
+"@mizdra/eslint-plugin-layout-shift@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@mizdra/eslint-plugin-layout-shift/-/eslint-plugin-layout-shift-1.0.1.tgz#fe589106b58ad18c1057f71cc04b275272808481"
+  integrity sha512-rms2HZUp5BUwJJ+w3YEiyi4Vrcc2x0L+Yg1HWOGCoc/FM3VMgeE3fF22Gs+E6dxiskPn9QgcoNOJDqdAmlRSgg==
+  dependencies:
+    jsx-ast-utils "^2.4.1"
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
@@ -6161,7 +6168,7 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-jsx-ast-utils@^2.0.1:
+jsx-ast-utils@^2.0.1, jsx-ast-utils@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.4.1.tgz#1114a4c1209481db06c690c2b4f488cc665f657e"
   integrity sha512-z1xSldJ6imESSzOjd3NNkieVJKRlKYSOtMG8SFyCj2FIrvSaSuli/WjpBkEzCBoR9bYYYFgqJw61Xhu7Lcgk+w==

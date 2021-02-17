@@ -10,12 +10,12 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:js": "eslint --ext .js,.ts,.tsx,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint",
+    "*.{js,ts,tsx,vue}": "eslint",
     "*.{css,vue}": "stylelint"
   },
   "husky": {
@@ -30,6 +30,7 @@
     "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
+    "@mizdra/eslint-plugin-layout-shift": "^1.0.1",
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxtjs/eslint-config": "^5.0.0",
