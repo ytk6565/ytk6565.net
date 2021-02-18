@@ -9,10 +9,11 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "generate": "nuxt-ts generate && npm run webp",
     "lint:js": "eslint --ext .js,.ts,.tsx,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint": "yarn lint:js && yarn lint:style"
+    "lint": "yarn lint:js && yarn lint:style",
+    "webp": "node ./src/config/webp.js"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue}": "eslint",
@@ -50,6 +51,8 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue-a11y": "^0.0.31",
     "husky": "^4.3.7",
+    "imagemin": "^7.0.1",
+    "imagemin-webp": "^6.0.0",
     "lint-staged": "^10.5.3",
     "nuxt-purgecss": "^1.0.0",
     "postcss": "^7",
