@@ -8,7 +8,7 @@
 
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
   },
   theme: {
     screens: {
