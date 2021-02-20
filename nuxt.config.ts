@@ -112,6 +112,20 @@ const nuxtConfiguration: NuxtConfig = {
      */
     interval: 2000,
   },
+  /*
+   ** Render configuration
+   ** See https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-render
+   */
+  render: {
+    csp: {
+      hashAlgorithm: 'sha256',
+      policies: {
+        'default-src': ["'self'"],
+        'script-src': ['https://www.google-analytics.com'],
+      },
+      addMeta: true,
+    },
+  },
   // Doc: https://purgecss.com/guides/nuxt.html#options
   purgeCSS: {
     enabled: true,
