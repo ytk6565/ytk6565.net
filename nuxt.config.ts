@@ -116,16 +116,16 @@ const nuxtConfiguration: NuxtConfig = {
    ** Render configuration
    ** See https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-render
    */
-  render: {
-    csp: {
-      policies: {
-        'script-src': [
-          'https://ytk6565.net',
-          'https://www.google-analytics.com',
-        ],
-      },
-    },
-  },
+  // render: {
+  //   csp: {
+  //     policies: {
+  //       'script-src': [
+  //         'https://ytk6565.net',
+  //         'https://www.google-analytics.com',
+  //       ],
+  //     },
+  //   },
+  // },
   // Doc: https://purgecss.com/guides/nuxt.html#options
   purgeCSS: {
     enabled: true,
