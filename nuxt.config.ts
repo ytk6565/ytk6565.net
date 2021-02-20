@@ -119,7 +119,10 @@ const nuxtConfiguration: NuxtConfig = {
   render: {
     csp: {
       policies: {
-        'script-src': ['https://www.google-analytics.com'],
+        'script-src': [
+          'https://ytk6565.net',
+          'https://www.google-analytics.com',
+        ],
       },
     },
   },
