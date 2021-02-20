@@ -118,12 +118,9 @@ const nuxtConfiguration: NuxtConfig = {
    */
   render: {
     csp: {
-      hashAlgorithm: 'sha256',
       policies: {
-        'default-src': ["'self'"],
         'script-src': ['https://www.google-analytics.com'],
       },
-      addMeta: true,
     },
   },
   // Doc: https://purgecss.com/guides/nuxt.html#options
