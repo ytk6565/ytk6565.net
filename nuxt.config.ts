@@ -56,8 +56,6 @@ const nuxtConfiguration: NuxtConfig = {
     '@nuxtjs/stylelint-module',
     // Doc: https://tailwindcss.nuxtjs.org/
     '@nuxtjs/tailwindcss',
-    // Doc: https://purgecss.com/guides/nuxt.html
-    'nuxt-purgecss',
     // Doc: https://google-analytics.nuxtjs.org
     '@nuxtjs/google-analytics',
   ],
@@ -126,31 +124,6 @@ const nuxtConfiguration: NuxtConfig = {
   //     },
   //   },
   // },
-  // Doc: https://purgecss.com/guides/nuxt.html#options
-  purgeCSS: {
-    enabled: true,
-    mode: 'postcss',
-    paths: [
-      'components/**/*.vue',
-      'components/**/*.tsx',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.ts',
-    ],
-    whitelist: [
-      'body',
-      'html',
-      'nuxt-progress',
-      '.nuxt-progress',
-      'nuxt-link-active',
-    ],
-    extractors: [
-      {
-        extractor: (content: string) => content.match(/[A-z0-9-:\\/]+/g) || [],
-        extensions: ['vue', 'js', 'tsx', 'ts'],
-      },
-    ],
-  },
   // Doc: https://google-analytics.nuxtjs.org/options
   googleAnalytics: {
     id: 'UA-186919639-2',

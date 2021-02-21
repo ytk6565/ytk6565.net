@@ -9,6 +9,17 @@
 module.exports = {
   purge: {
     enabled: true,
+    content: [
+      'src/components/**/*.vue',
+      'src/components/**/*.tsx',
+      'src/layouts/**/*.vue',
+      'src/pages/**/*.vue',
+      'src/plugins/**/*.js',
+      'src/nuxt.config.js',
+      // TypeScript
+      'src/plugins/**/*.ts',
+      'src/nuxt.config.ts',
+    ],
   },
   theme: {
     screens: {
