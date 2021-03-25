@@ -29,7 +29,7 @@
     "@vue/composition-api": "^1.0.0-rc.1",
     "nuxt": "^2.14.12",
     "nuxt-webfontloader": "^1.1.0",
-    "ssri": "^6.0.1"
+    "ssri": "^8.0.1"
   },
   "devDependencies": {
     "@mizdra/eslint-plugin-layout-shift": "^1.0.1",
