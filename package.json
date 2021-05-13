@@ -13,16 +13,13 @@
     "lint:js": "eslint --ext .js,.ts,.tsx,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
-    "webp": "node ./src/config/webp.js"
+    "webp": "node ./src/config/webp.js",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "*.{vue}": "vti diagnostics",
+    "*.{js,ts,tsx,vue}": "eslint --cache --fix",
+    "*.{css,vue}": "stylelint --fix"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
@@ -51,7 +48,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue-a11y": "^0.0.31",
-    "husky": "^4.3.7",
+    "husky": ">=6",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^6.0.0",
     "lint-staged": "^10.5.3",
@@ -61,6 +58,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "vti": "^0.1.1",
     "vue-tsx-support": "^3.0.3"
   }
 }
