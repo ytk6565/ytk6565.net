@@ -137,6 +137,7 @@
             <li>Markup Engineer. (<time>2017.09 - 2018.03</time>)</li>
             <li>Markup Engineer. (<time>2018.04 - 2018.07</time>)</li>
             <li>Front-End Engineer. (<time>2018.08 - 2021.03</time>)</li>
+            <li>Front-End Engineer. (<time>2021.04 -</time>)</li>
           </ul>
         </section>
 
@@ -166,15 +167,10 @@ import { defineComponent } from '@vue/composition-api'
 
 import { AppSocial } from '~/components/AppSocial.tsx'
 
-type Data = {}
-type Computed = {}
-type Methods = {}
-type RawBindings = {}
-
-export default defineComponent<RawBindings, Data, Computed, Methods>({
+export default defineComponent({
   components: {
     AppSocial,
   },
-  setup(_props, _ctx) {},
+  setup() {},
 })
 </script>
