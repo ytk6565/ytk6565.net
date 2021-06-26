@@ -6,10 +6,10 @@
     "node": "14.x"
   },
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate && npm run webp",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate && npm run webp",
     "lint:js": "eslint --ext .js,.ts,.tsx,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
