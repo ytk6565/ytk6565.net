@@ -1,0 +1,17 @@
+# 2021/06/26
+- インストールコマンドを yarn から npm に変更
+- prettier の設定を変更
+- パッケージのバージョンを固定するように変更
+- パッケージ更新対応
+  - vue-tsx-support
+    - tsconfig.json の jsxFactory を VueTsxSupport に修正
+  - postcss8
+    - Nuxt.js で利用するため @nuxt/postcss8 を追加
+    - プラグインのパスを指定（tailwind, autoprefixer）
+      - tailwindの設定ファイルのパスを指定
+  - tailwind
+    - mode を jit に変更
+- a11y の ESLint プラグインを変更
+  - BEFORE: eslint-plugin-vue-a11y
+  - AFTER:  eslint-plugin-vuejs-accessibility
+- Nuxt.js のコマンドを nuxt-ts から nuxt に変更
