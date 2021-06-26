@@ -1,3 +1,4 @@
+import path from "path";
 import { NuxtConfig } from "@nuxt/types";
 
 const nuxtConfiguration: NuxtConfig = {
@@ -52,6 +53,8 @@ const nuxtConfiguration: NuxtConfig = {
   buildModules: [
     // Doc: https://typescript.nuxtjs.org
     "@nuxt/typescript-build",
+    // Doc: https://github.com/nuxt/postcss8
+    "@nuxt/postcss8",
     // Doc: https://github.com/nuxt-community/stylelint-module
     "@nuxtjs/stylelint-module",
     // Doc: https://tailwindcss.nuxtjs.org/
@@ -78,7 +81,12 @@ const nuxtConfiguration: NuxtConfig = {
       output.globalObject = "this";
     },
     postcss: {
-      plugins: [require("autoprefixer"), require("autoprefixer")],
+      plugins: {
+        tailwindcss: require("tailwindcss")(
+          path.join(__dirname, "src/tailwind.config.js")
+        ),
+        autoprefixer: require("autoprefixer"),
+      },
       preset: {
         features: {
           // Fixes: https://github.com/tailwindcss/tailwindcss/issues/1190#issuecomment-546621554

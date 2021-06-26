@@ -7,6 +7,7 @@
 // const { } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  mode: "jit",
   purge: {
     enabled: true,
     content: [
