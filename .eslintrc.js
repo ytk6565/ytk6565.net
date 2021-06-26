@@ -9,8 +9,9 @@ module.exports = {
     "prettier",
     "plugin:prettier/recommended",
     "plugin:nuxt/recommended",
+    "plugin:vuejs-accessibility/recommended",
   ],
-  plugins: ["prettier", "@mizdra/layout-shift"],
+  plugins: ["@mizdra/layout-shift"],
   rules: {
     "@mizdra/layout-shift/require-size-attributes": 2,
   },
