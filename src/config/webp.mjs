@@ -1,5 +1,5 @@
-const imagemin = require("imagemin");
-const imageminWebp = require("imagemin-webp");
+import imagemin from "imagemin";
+import imageminWebp from "imagemin-webp";
 const DEST_DIR = "./dist/_nuxt/img/";
 const COMMON_OPTIONS = {
   quality: 75,

@@ -13,7 +13,7 @@
     "lint:js": "eslint --ext .js,.ts,.tsx,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
-    "webp": "node ./src/config/webp.js",
+    "webp": "node ./src/config/webp.mjs",
     "prepare": "husky install"
   },
   "lint-staged": {
