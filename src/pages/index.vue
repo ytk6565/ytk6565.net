@@ -163,14 +163,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from "@vue/composition-api";
 
-import { AppSocial } from '~/components/AppSocial.tsx'
+import { AppSocial } from "~/components/AppSocial";
 
 export default defineComponent({
   components: {
     AppSocial,
   },
   setup() {},
-})
+});
 </script>

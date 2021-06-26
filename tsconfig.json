@@ -9,7 +9,7 @@
       "DOM"
     ],
     "jsx": "preserve",
-    "jsxFactory": "h",
+    "jsxFactory": "VueTsxSupport",
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
@@ -33,7 +33,7 @@
   },
   "include": [
     "node_modules/vue-tsx-support/enable-check.d.ts",
-    "src"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",

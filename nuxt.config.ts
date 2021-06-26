@@ -1,7 +1,7 @@
-import { NuxtConfig } from '@nuxt/types'
+import { NuxtConfig } from "@nuxt/types";
 
 const nuxtConfiguration: NuxtConfig = {
-  srcDir: 'src/',
+  srcDir: "src/",
   /*
    ** Nuxt ssr
    ** See https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-ssr
@@ -11,26 +11,26 @@ const nuxtConfiguration: NuxtConfig = {
    ** Nuxt target
    ** See https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-target
    */
-  target: 'static',
+  target: "static",
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || "",
     htmlAttrs: {
-      lang: 'ja',
+      lang: "ja",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || "",
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Global CSS
@@ -40,7 +40,7 @@ const nuxtConfiguration: NuxtConfig = {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/docs/2.x/directory-structure/plugins
    */
-  plugins: ['~/plugins/composition-api'],
+  plugins: ["~/plugins/composition-api"],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-components
@@ -51,20 +51,20 @@ const nuxtConfiguration: NuxtConfig = {
    */
   buildModules: [
     // Doc: https://typescript.nuxtjs.org
-    '@nuxt/typescript-build',
+    "@nuxt/typescript-build",
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
+    "@nuxtjs/stylelint-module",
     // Doc: https://tailwindcss.nuxtjs.org/
-    '@nuxtjs/tailwindcss',
+    "@nuxtjs/tailwindcss",
     // Doc: https://google-analytics.nuxtjs.org
-    '@nuxtjs/google-analytics',
+    "@nuxtjs/google-analytics",
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://github.com/Developmint/nuxt-webfontloader
-    'nuxt-webfontloader',
+    "nuxt-webfontloader",
   ],
   /*
    ** Build configuration
@@ -75,13 +75,14 @@ const nuxtConfiguration: NuxtConfig = {
       extractComments: false,
     },
     extend: ({ output }) => {
-      output.globalObject = 'this'
+      output.globalObject = "this";
     },
     postcss: {
+      plugins: [require("autoprefixer"), require("autoprefixer")],
       preset: {
         features: {
           // Fixes: https://github.com/tailwindcss/tailwindcss/issues/1190#issuecomment-546621554
-          'focus-within-pseudo-class': false,
+          "focus-within-pseudo-class": false,
         },
       },
     },
@@ -89,13 +90,13 @@ const nuxtConfiguration: NuxtConfig = {
       presets({ isServer }) {
         return [
           [
-            require.resolve('@nuxt/babel-preset-app'),
+            require.resolve("@nuxt/babel-preset-app"),
             {
-              buildTarget: isServer ? 'server' : 'client',
+              buildTarget: isServer ? "server" : "client",
               corejs: { version: 3 },
             },
           ],
-        ]
+        ];
       },
     },
   },
@@ -126,15 +127,15 @@ const nuxtConfiguration: NuxtConfig = {
   // },
   // Doc: https://google-analytics.nuxtjs.org/options
   googleAnalytics: {
-    id: 'UA-186919639-2',
+    id: "UA-186919639-2",
   },
   // Doc: https://github.com/typekit/webfontloader
   webfontloader: {
     google: {
       // Loads Open Sans font with weights 300 and 400 + display font as swap
-      families: ['Inter:400,700&display=swap'],
+      families: ["Inter:400,700&display=swap"],
     },
   },
-}
+};
 
-export default nuxtConfiguration
+export default nuxtConfiguration;
