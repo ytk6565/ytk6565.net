@@ -56,7 +56,7 @@ export const AppSocial = tsx.component({
                 href={link.url}
                 target="_black"
                 rel="noopener"
-                class={["btn-opacity", "block", "w-40", "h-40", "btn-opacity"]}
+                class={["btn-opacity", "block", "w-48", "h-48"]}
               >
                 <img
                   src={link.src}

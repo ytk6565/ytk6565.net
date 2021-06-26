@@ -1,20 +1,25 @@
 /* purgecss start ignore */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
 /* purgecss end ignore */
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
 @layer base {
-  h1, h2 , h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply text-black;
     @apply font-bold;
   }
 }
 
-html {
+/* html {
   font-size: 62.5%;
-}
+} */
 
 body {
   @apply bg-white;
@@ -23,10 +28,10 @@ body {
 }
 
 .container {
-  width: 768px;
+  width: 540px;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #__nuxt {

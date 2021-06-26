@@ -8,9 +8,11 @@
   - postcss8
     - Nuxt.js で利用するため @nuxt/postcss8 を追加
     - プラグインのパスを指定（tailwind, autoprefixer）
-      - tailwindの設定ファイルのパスを指定
+      - tailwind.config.js のパスを指定
   - tailwind
     - mode を jit に変更
+    - generate 時に html タグに font-size を指定すると記述が削除される
+      - tailwind.config.js で 10px を基準に計算する関数を作成して対応
 - a11y の ESLint プラグインを変更
   - BEFORE: eslint-plugin-vue-a11y
   - AFTER:  eslint-plugin-vuejs-accessibility
