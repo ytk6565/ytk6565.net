@@ -10,43 +10,25 @@
       <div :class="['mt-64']">
         <section>
           <h2 :class="['mt-32', 'mb-16', 'text-xl']">Skills</h2>
-          <div :class="['md:flex', 'md:flex-wrap']">
-            <section :class="['md:min-w-1/2']">
-              <h3 :class="['mt-16', 'mb-8', 'text-lg']">Language</h3>
-              <ul>
-                <li>TypeScript</li>
-                <li>Node.js</li>
-              </ul>
-            </section>
-            <section :class="['md:min-w-1/2']">
-              <h3 :class="['mt-16', 'mb-8', 'text-lg']">Frameworks</h3>
-              <ul>
-                <li>Vue.js / Nuxt.js</li>
-                <li>Riot.js</li>
-              </ul>
-            </section>
-            <section :class="['md:min-w-1/2']">
-              <h3 :class="['mt-16', 'mb-8', 'text-lg']">Platform</h3>
-              <ul>
-                <li>Firebase</li>
-                <li>Amazon Web Service</li>
-              </ul>
-            </section>
-            <section :class="['md:min-w-1/2']">
-              <h3 :class="['mt-16', 'mb-8', 'text-lg']">Library</h3>
-              <ul>
-                <li>Jest</li>
-                <li>Storybook</li>
-                <li>Puppeteer</li>
-              </ul>
-            </section>
-            <section :class="['md:min-w-1/2']">
-              <h3 :class="['mt-16', 'mb-8', 'text-lg']">CMS</h3>
-              <ul>
-                <li>WordPress</li>
-              </ul>
-            </section>
-          </div>
+          <section>
+            <h3 :class="['mt-16', 'mb-8', 'text-lg']">Programing language</h3>
+            <p>HTML, CSS, JavaScript, TypeScript, Node.js, PHP</p>
+          </section>
+          <section>
+            <h3 :class="['mt-16', 'mb-8', 'text-lg']">Library</h3>
+            <p>
+              Vue.js(Nuxt.js), Riot.js, GraphQL(Apollo Client), Jest, Storybook,
+              Puppeteer
+            </p>
+          </section>
+          <section>
+            <h3 :class="['mt-16', 'mb-8', 'text-lg']">Platform</h3>
+            <p>Firebase, Amazon Web Service</p>
+          </section>
+          <section>
+            <h3 :class="['mt-16', 'mb-8', 'text-lg']">CMS</h3>
+            <p>WordPress</p>
+          </section>
         </section>
 
         <section>
