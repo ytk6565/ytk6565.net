@@ -12,18 +12,15 @@
           <h2 :class="['mt-32', 'mb-16', 'text-xl']">Skills</h2>
           <section>
             <h3 :class="['mt-16', 'mb-8', 'text-lg']">Programing language</h3>
-            <p>HTML, CSS, JavaScript, TypeScript, Node.js, PHP</p>
+            <p>HTML, CSS, JavaScript, TypeScript</p>
           </section>
           <section>
             <h3 :class="['mt-16', 'mb-8', 'text-lg']">Library</h3>
-            <p>
-              Vue.js(Nuxt.js), Riot.js, GraphQL(Apollo Client), Jest, Storybook,
-              Puppeteer
-            </p>
+            <p>Vue.js(Nuxt.js), Riot.js, Jest, Storybook</p>
           </section>
           <section>
             <h3 :class="['mt-16', 'mb-8', 'text-lg']">Platform</h3>
-            <p>Firebase, Amazon Web Service</p>
+            <p>Firebase</p>
           </section>
           <section>
             <h3 :class="['mt-16', 'mb-8', 'text-lg']">CMS</h3>
