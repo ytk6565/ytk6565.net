@@ -9,7 +9,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   plugins: [
     react(),
-    eslint({ fix: true }),
+    eslint({ fix: true, exclude: '**/virtual:/**' }),
     VitePluginFonts({
       google: {
         families: [

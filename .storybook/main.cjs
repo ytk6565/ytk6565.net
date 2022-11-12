@@ -8,10 +8,7 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite',
-  },
+  framework: '@storybook/react-vite',
   features: {
     storyStoreV7: true,
   },
@@ -21,7 +18,9 @@ module.exports = {
         projects: [path.resolve(path.dirname(__dirname), 'tsconfig.json')],
       })
     );
-    
     return config;
+  },
+  docsPage: {
+    docs: 'automatic',
   },
 };
