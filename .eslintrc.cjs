@@ -28,12 +28,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.tsx'],
-      env: {
-        browser: true,
-      },
-    },
-    {
       files: ['**/*.cjs'],
       env: {
         commonjs: true,
