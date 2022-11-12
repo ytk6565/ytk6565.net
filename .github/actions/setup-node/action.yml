@@ -1,0 +1,31 @@
+name: "Setup Node.js"
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version-file: ".node-version"
+        cache: "npm"
+        cache-dependency-path: "**/package-lock.json"
+
+    - run: npm ci
+      shell: bash
+
+    # - name: Get npm cache directory
+    #   id: npm-cache-dir
+    #   run: |
+    #     echo "::set-output name=dir::$(npm config get cache)"
+    #   shell: bash
+
+    # - uses: actions/cache@v3
+    #   id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+    #   with:
+    #     path: ${{ steps.npm-cache-dir.outputs.dir }}
+    #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-node-
+
+    # - if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+    #   run: npm ci
+    #   shell: bash

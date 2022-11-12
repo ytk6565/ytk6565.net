@@ -1,0 +1,40 @@
+name: "CI Scripts"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      - "**.tsx?"
+      - "**.jsx?"
+      - .github/workflows/ci-scripts.yml
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: ./.github/actions/setup-node
+
+      - name: Format
+        id: format
+        run: npm run format
+
+      - name: Type check
+        id: type-check
+        run: npm run tsc
+
+      - name: Lint
+        id: lint
+        run: npm run lint
+
+      - name: Unit test
+        id: unit-test
+        run: npm run test
