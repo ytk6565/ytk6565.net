@@ -4,6 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
     'plugin:prettier/recommended',
   ],
   plugins: ['import', 'no-floating-promise', '@mizdra/layout-shift'],
@@ -88,7 +89,9 @@ module.exports = {
                 position: 'after',
               },
             ],
-            alphabetize: { order: 'asc' },
+            alphabetize: {
+              order: 'asc',
+            },
             'newlines-between': 'always',
           },
         ],

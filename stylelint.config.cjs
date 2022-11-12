@@ -9,5 +9,6 @@ module.exports = {
         ignoreAtRules: ['tailwind', 'apply', 'layer'],
       },
     ],
+    'selector-class-pattern': null,
   },
 };
