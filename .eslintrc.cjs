@@ -32,6 +32,9 @@ module.exports = {
       env: {
         commonjs: true,
       },
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
     },
     {
       files: ['src/**/*.{js,jsx,ts,tsx}', 'vite.config.ts'],
