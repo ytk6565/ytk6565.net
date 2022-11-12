@@ -1,10 +1,4 @@
-/*
- ** TailwindCSS Configuration File
- **
- ** Docs: https://tailwindcss.com/docs/configuration
- ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
- */
-// const { } = require('tailwindcss/defaultTheme')
+/** @type {import('tailwindcss').Config} */
 
 const HTML_FONT_SIZE_DEFAULT = 16;
 const HTML_FONT_SIZE_BASE = 10;
@@ -14,20 +8,7 @@ const rem = (size) =>
 
 module.exports = {
   mode: "jit",
-  purge: {
-    enabled: true,
-    content: [
-      "src/components/**/*.vue",
-      "src/components/**/*.tsx",
-      "src/layouts/**/*.vue",
-      "src/pages/**/*.vue",
-      "src/plugins/**/*.js",
-      "src/nuxt.config.js",
-      // TypeScript
-      "src/plugins/**/*.ts",
-      "src/nuxt.config.ts",
-    ],
-  },
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
       // sm: "640px",

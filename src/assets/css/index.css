@@ -1,9 +1,6 @@
-/* purgecss start ignore */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-
-/* purgecss end ignore */
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   h1,
@@ -24,7 +21,6 @@
 body {
   @apply bg-white;
   @apply text-base;
-  @apply text-gray;
 }
 
 .container {
@@ -32,11 +28,6 @@ body {
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-}
-
-#__nuxt {
-  min-width: 100vw;
-  min-height: 100vh;
 }
 
 .btn-opacity {
