@@ -24,6 +24,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "17.2.0",
+    "@commitlint/config-conventional": "17.2.0",
     "@mizdra/eslint-plugin-layout-shift": "1.0.1",
     "@storybook/addon-actions": "^7.0.0-alpha.48",
     "@storybook/addon-essentials": "^7.0.0-alpha.48",
