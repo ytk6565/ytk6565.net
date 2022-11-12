@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import logoGitHub from '../assets/image/logo/github.png';
-import logoQiita from '../assets/image/logo/qiita.png';
-import logoTwitter from '../assets/image/logo/twitter.png';
-import logoZenn from '../assets/image/logo/zenn.png';
+import logoGitHub from '../../assets/image/logo/github.png';
+import logoQiita from '../../assets/image/logo/qiita.png';
+import logoTwitter from '../../assets/image/logo/twitter.png';
+import logoZenn from '../../assets/image/logo/zenn.png';
 
 type Link = {
   url: string;
