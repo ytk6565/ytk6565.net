@@ -1,7 +1,8 @@
-import { FC } from 'react';
+import Home from '@/pages/index';
 
-import Home from './pages/index';
-import './assets/css/index.css';
+import type { FC } from 'react';
+
+import '@/assets/css/index.css';
 
 const App: FC = () => {
   return <Home />;

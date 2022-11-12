@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import SocialList from '@/components/SocialList';
 
-import SocialList from '../components/SocialList';
+import type { FC } from 'react';
 
 const Home: FC = () => (
   <main className="pt-64 pb-64">

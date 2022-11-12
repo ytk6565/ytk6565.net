@@ -1,17 +1,17 @@
-import { FC } from 'react';
+import logoGitHub from '@/assets/image/logo/github.png';
+import logoQiita from '@/assets/image/logo/qiita.png';
+import logoTwitter from '@/assets/image/logo/twitter.png';
+import logoZenn from '@/assets/image/logo/zenn.png';
 
-import logoGitHub from '../../assets/image/logo/github.png';
-import logoQiita from '../../assets/image/logo/qiita.png';
-import logoTwitter from '../../assets/image/logo/twitter.png';
-import logoZenn from '../../assets/image/logo/zenn.png';
+import type { FC } from 'react';
 
-type Link = {
+interface Link {
   url: string;
   src: string;
   alt: string;
   width: number;
   height: number;
-};
+}
 
 const links: Record<string, Link> = {
   twitter: {
