@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
 import { VitePluginFonts } from 'vite-plugin-fonts';
 import { VitePluginRadar } from 'vite-plugin-radar';
-import ViteTSConfigPaths from 'vite-tsconfig-paths';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,6 +25,6 @@ export default defineConfig({
         id: 'UA-186919639-2',
       },
     }),
-    ViteTSConfigPaths(),
+    tsconfigPaths(),
   ],
 });
