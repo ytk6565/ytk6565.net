@@ -1,12 +1,12 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['prettier', 'eslint:recommended', 'plugin:react/recommended'],
-  plugins: [
-    '@typescript-eslint',
-    'import',
-    'no-floating-promise',
-    '@mizdra/layout-shift',
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
+  plugins: ['import', 'no-floating-promise', '@mizdra/layout-shift'],
   settings: {
     react: {
       version: 'detect',
