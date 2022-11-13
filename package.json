@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "pnpm": ">=7"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm run webp",
+    "build": "tsc && vite build && pnpm webp",
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
@@ -15,7 +18,7 @@
     "typecheck": "tsc --noEmit",
     "lint:scripts": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
     "lint:styles": "stylelint **/*.css --ignore-path .gitignore",
-    "lint": "npm run lint:scripts && npm run lint:styles",
+    "lint": "pnpm lint:scripts && pnpm lint:styles",
     "webp": "node ./config/webp.mjs",
     "prepare": "husky install"
   },
@@ -28,9 +31,11 @@
     "@commitlint/config-conventional": "17.2.0",
     "@mizdra/eslint-plugin-layout-shift": "1.0.1",
     "@storybook/addon-actions": "^7.0.0-alpha.48",
+    "@storybook/addon-docs": "7.0.0-alpha.48",
     "@storybook/addon-essentials": "^7.0.0-alpha.48",
     "@storybook/addon-interactions": "^7.0.0-alpha.48",
     "@storybook/addon-links": "^7.0.0-alpha.48",
+    "@storybook/react": "7.0.0-alpha.48",
     "@storybook/react-vite": "7.0.0-alpha.48",
     "@storybook/testing-library": "^0.0.14-next.0",
     "@testing-library/jest-dom": "5.16.5",
