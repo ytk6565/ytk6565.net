@@ -7,10 +7,11 @@ const buildEslintCommand = (filenames) =>
     .join(' ')}`;
 
 module.exports = {
-  '**/*.{js,jsx,ts,tsx}': [buildEslintCommand, 'git add'],
-  '**/*.{ts,tsx}': ["bash -c 'npm run typecheck'", 'git add'],
-  '**/*.{html,js,jsx,ts,tsx,json,css}': (filenames) => [
-    `prettier --write ${filenames.join(' ')}`,
-    'git add',
-  ],
+  '**/*': ['git add'],
+  // '**/*.{js,jsx,ts,tsx}': [buildEslintCommand, 'git add'],
+  // '**/*.{ts,tsx}': ["bash -c 'npm run typecheck'", 'git add'],
+  // '**/*.{html,js,jsx,ts,tsx,json,css}': (filenames) => [
+  //   `prettier --write ${filenames.join(' ')}`,
+  //   'git add',
+  // ],
 };

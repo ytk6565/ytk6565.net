@@ -4,36 +4,36 @@
 
 ```bash
 # install dependencies
-$ npm ci
+$ pnpm i --frozen-lockfile
 
 # serve with hot reload at localhost:5173
-$ npm run dev
+$ pnpm dev
 
 # build for production and launch server
-$ npm run build
-$ npm run preview
+$ pnpm build
+$ pnpm preview
 ```
 
 ## Lint
 
 ```bash
-$ npm run lint
+$ pnpm lint
 ```
 
 ## Unit test
 
 ```bash
-$ npm run test
+$ pnpm test
 ```
 
 ## Storybook
 
 ```bash
 # serve with hot reload at localhost:6006
-$ npm run storybook
+$ pnpm storybook
 
 # build for production
-$ npm run build-storybook
+$ pnpm build-storybook
 ```
 
 ### Update Storybook to prerelease

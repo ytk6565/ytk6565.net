@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  },
+  "extends": "@ytk6565.net/tsconfig/vite.json",
+  "include": ["."],
+  "exclude": ["dist", "build"],
+}
