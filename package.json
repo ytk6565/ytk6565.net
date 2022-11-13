@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && pnpm webp",
+    "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
@@ -19,7 +19,6 @@
     "lint:scripts": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
     "lint:styles": "stylelint **/*.css --ignore-path .gitignore",
     "lint": "pnpm lint:scripts && pnpm lint:styles",
-    "webp": "node ./config/webp.mjs",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -57,8 +56,6 @@
     "eslint-plugin-storybook": "^0.6.7",
     "happy-dom": "7.7.0",
     "husky": "8.0.2",
-    "imagemin": "8.0.1",
-    "imagemin-webp": "7.0.0",
     "lint-staged": "13.0.3",
     "postcss": "8.4.19",
     "prettier": "2.7.1",
