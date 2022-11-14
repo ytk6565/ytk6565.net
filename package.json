@@ -17,20 +17,10 @@
     "lint": "turbo run lint",
     "devPreinstall": "husky install"
   },
-  "dependencies": {
-    "@ytk6565.net/assets": "workspace:*",
-    "@ytk6565.net/eslint-config-base": "workspace:*",
-    "@ytk6565.net/eslint-config-react": "workspace:*",
-    "@ytk6565.net/stylelint-config-base": "workspace:*",
-    "@ytk6565.net/tsconfig": "workspace:*",
-    "@ytk6565.net/ui": "workspace:*",
-    "@ytk6565.net/web": "workspace:*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "17.2.0",
     "@commitlint/config-conventional": "17.2.0",
-    "babel-loader": "^8.3.0",
-    "happy-dom": "7.7.0",
     "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "prettier": "2.7.1"

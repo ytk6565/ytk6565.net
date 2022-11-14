@@ -10,7 +10,7 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "typecheck": "tsc --noEmit",
     "lint:scripts": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
-    "lint:styles": "stylelint **/*.css --ignore-path .gitignore",
+    "lint:styles": "stylelint **/*.css --ignore-path .gitignore --allow-empty-input",
     "lint": "pnpm lint:scripts && pnpm lint:styles"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "@ytk6565.net/tailwindcss": "workspace:*",
     "@ytk6565.net/tsconfig": "workspace:*",
     "eslint": "7.32.0",
+    "stylelint": "14.15.0",
     "typescript": "^4.5.3",
     "vite": "3.2.3",
     "vite-plugin-eslint": "1.8.1",
