@@ -1,0 +1,5 @@
+{
+  "eslint.packageManager": "pnpm",
+  "npm.packageManager": "pnpm",
+  "eslint.workingDirectories": [{ "mode": "auto" }]
+}
