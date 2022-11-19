@@ -6,7 +6,6 @@
   "dependencies": {
     "@mizdra/eslint-plugin-layout-shift": "1.0.1",
     "@ytk6565.net/eslint-config-base": "workspace:*",
-    "eslint": "8.27.0",
     "eslint-plugin-react": "7.31.10"
   },
   "devDependencies": {

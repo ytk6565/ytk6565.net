@@ -6,7 +6,6 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "5.42.1",
     "@typescript-eslint/parser": "5.42.1",
-    "eslint": "8.27.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-no-floating-promise": "1.0.2",
