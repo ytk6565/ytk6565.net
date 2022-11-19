@@ -8,6 +8,15 @@
     "lint": {
       "outputs": []
     },
+    "lint:scripts": {
+      "outputs": []
+    },
+    "lint:styles": {
+      "outputs": []
+    },
+    "typecheck": {
+      "outputs": []
+    },
     "dev": {
       "cache": false
     }

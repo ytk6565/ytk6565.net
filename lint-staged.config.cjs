@@ -1,17 +1,24 @@
-const path = require('path');
-
-const buildEslintCommand = (filenames) =>
-  `eslint --fix ${filenames
-    // eslint-disable-next-line no-undef
-    .map((f) => path.relative(process.cwd(), f))
-    .join(' ')}`;
-
 module.exports = {
-  '**/*': ['git add'],
-  // '**/*.{js,jsx,ts,tsx}': [buildEslintCommand, 'git add'],
-  // '**/*.{ts,tsx}': ["bash -c 'npm run typecheck'", 'git add'],
-  // '**/*.{html,js,jsx,ts,tsx,json,css}': (filenames) => [
-  //   `prettier --write ${filenames.join(' ')}`,
-  //   'git add',
-  // ],
+  'apps/web/**/*.{js,jsx,ts,tsx}': (filenames) => [
+    'pnpm --filter @ytk6565.net/web lint:scripts --fix',
+    'pnpm --filter @ytk6565.net/web typecheck',
+    `git add ${filenames.join(' ')}`,
+  ],
+  'apps/web/**/*.{html,css}': (filenames) => [
+    'pnpm --filter @ytk6565.net/web lint:styles --fix',
+    `git add ${filenames.join(' ')}`,
+  ],
+  'packages/ui/**/*.{js,jsx,ts,tsx}': (filenames) => [
+    'pnpm --filter @ytk6565.net/ui lint:scripts --fix',
+    'pnpm --filter @ytk6565.net/ui typecheck',
+    `git add ${filenames.join(' ')}`,
+  ],
+  'packages/ui/**/*.{html,css}': (filenames) => [
+    'pnpm --filter @ytk6565.net/ui lint:styles --fix',
+    `git add ${filenames.join(' ')}`,
+  ],
+  '**/*.{html,js,jsx,ts,tsx,cjs,mjs,json,css}': (filenames) => [
+    `prettier --write ${filenames.join(' ')}`,
+    `git add ${filenames.join(' ')}`,
+  ],
 };
