@@ -6,6 +6,14 @@
   "engines": {
     "pnpm": ">=7"
   },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@babel/*",
+        "@testing-library/dom"
+      ]
+    }
+  },
   "packageManager": "pnpm@7.15.0",
   "workspaces": [
     "apps/*",
