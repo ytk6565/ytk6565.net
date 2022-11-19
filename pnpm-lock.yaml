@@ -18,9 +18,9 @@ importers:
 
   apps/web:
     specifiers:
-      '@types/node': ^17.0.12
-      '@types/react': ^18.0.25
-      '@types/react-dom': ^18.0.8
+      '@types/node': 18.11.9
+      '@types/react': 18.0.25
+      '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0
       '@ytk6565.net/assets': workspace:*
       '@ytk6565.net/eslint-config-react': workspace:*
@@ -32,7 +32,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0
       stylelint: 14.15.0
-      typescript: ^4.5.3
+      typescript: 4.8.4
       vite: 3.2.3
       vite-plugin-eslint: 1.8.1
       vite-plugin-fonts: 0.6.0
@@ -43,9 +43,9 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.9
       '@types/react': 18.0.25
-      '@types/react-dom': 18.0.8
+      '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0_vite@3.2.3
       '@ytk6565.net/assets': link:../../packages/assets
       '@ytk6565.net/eslint-config-react': link:../../packages/eslint-config-react
@@ -55,7 +55,7 @@ importers:
       eslint: 7.32.0
       stylelint: 14.15.0
       typescript: 4.8.4
-      vite: 3.2.3_@types+node@17.0.45
+      vite: 3.2.3_@types+node@18.11.9
       vite-plugin-eslint: 1.8.1_eslint@7.32.0+vite@3.2.3
       vite-plugin-fonts: 0.6.0_vite@3.2.3
       vite-plugin-radar: 0.5.0_vite@3.2.3
@@ -131,7 +131,7 @@ importers:
 
   packages/ui:
     specifiers:
-      '@mdx-js/react': ^2.1.5
+      '@mdx-js/react': 2.1.5
       '@storybook/addon-actions': 7.0.0-alpha.48
       '@storybook/addon-backgrounds': 7.0.0-alpha.50
       '@storybook/addon-controls': 7.0.0-alpha.50
@@ -150,8 +150,8 @@ importers:
       '@testing-library/jest-dom': 5.16.5
       '@testing-library/react': 13.4.0
       '@testing-library/user-event': 14.4.3
-      '@types/react': ^18.0.22
-      '@types/react-dom': ^18.0.7
+      '@types/react': 18.0.25
+      '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0
       '@ytk6565.net/assets': workspace:*
       '@ytk6565.net/eslint-config-react': workspace:*
@@ -192,7 +192,7 @@ importers:
       '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
       '@testing-library/user-event': 14.4.3
       '@types/react': 18.0.25
-      '@types/react-dom': 18.0.8
+      '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0_vite@3.2.3
       '@ytk6565.net/assets': link:../assets
       '@ytk6565.net/eslint-config-react': link:../eslint-config-react
@@ -4119,7 +4119,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.1
       '@testing-library/dom': 8.19.0
-      '@types/react-dom': 18.0.8
+      '@types/react-dom': 18.0.9
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
@@ -4394,10 +4394,6 @@ packages:
     resolution: {integrity: sha512-jh6m0QUhIRcZpNv7Z/rpN+ZWXOicUUQbSoWks7Htkbb9IjFQj4kzcX/xFCkjstCj5flMsN8FiSvt+q+Tcs4Llg==}
     dev: true
 
-  /@types/node/17.0.45:
-    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-    dev: true
-
   /@types/node/18.11.9:
     resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
     dev: true
@@ -4432,8 +4428,8 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: true
 
-  /@types/react-dom/18.0.8:
-    resolution: {integrity: sha512-C3GYO0HLaOkk9dDAz3Dl4sbe4AKUGTCfFIZsz3n/82dPNN8Du533HzKatDxeUYWu24wJgMP1xICqkWk1YOLOIw==}
+  /@types/react-dom/18.0.9:
+    resolution: {integrity: sha512-qnVvHxASt/H7i+XG1U1xMiY5t+IHcPGUK7TDMDzom08xa7e86eCeKOiLZezwCKVxJn6NEiiy2ekgX8aQssjIKg==}
     dependencies:
       '@types/react': 18.0.25
     dev: true
@@ -12182,7 +12178,7 @@ packages:
       '@types/eslint': 8.4.10
       eslint: 7.32.0
       rollup: 2.79.1
-      vite: 3.2.3_@types+node@17.0.45
+      vite: 3.2.3_@types+node@18.11.9
     dev: true
 
   /vite-plugin-eslint/1.8.1_eslint@8.27.0+vite@3.2.3:
@@ -12212,7 +12208,7 @@ packages:
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0
     dependencies:
-      vite: 3.2.3_@types+node@17.0.45
+      vite: 3.2.3_@types+node@18.11.9
     dev: true
 
   /vite-tsconfig-paths/3.5.2_vite@3.2.3:
@@ -12254,40 +12250,6 @@ packages:
       terser:
         optional: true
     dependencies:
-      esbuild: 0.15.13
-      postcss: 8.4.19
-      resolve: 1.22.1
-      rollup: 2.79.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vite/3.2.3_@types+node@17.0.45:
-    resolution: {integrity: sha512-h8jl1TZ76eGs3o2dIBSsvXDLb1m/Ec1iej8ZMdz+PsaFUsftZeWe2CZOI3qogEsMNaywc17gu0q6cQDzh/weCQ==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 17.0.45
       esbuild: 0.15.13
       postcss: 8.4.19
       resolve: 1.22.1
