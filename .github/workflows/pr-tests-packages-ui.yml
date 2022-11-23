@@ -42,7 +42,7 @@ jobs:
 
       - name: Unit test
         id: build
-        run: pnpm --filter @ytk6565.net/ui test
+        run: pnpm --filter @ytk6565.net/ui test -- run
 
       - name: Build Storybook
         id: build
