@@ -2,8 +2,6 @@ import { SocialList } from '../../organisms/SocialList';
 
 import type { FC } from 'react';
 
-// test ci
-
 export const Home: FC = () => (
   <main className="pt-64 pb-64">
     <div className="container pr-24 pl-24">
