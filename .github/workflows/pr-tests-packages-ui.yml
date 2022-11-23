@@ -1,4 +1,4 @@
-name: 'Apps Web Tests'
+name: 'Packages UI Tests'
 
 on:
   pull_request:
