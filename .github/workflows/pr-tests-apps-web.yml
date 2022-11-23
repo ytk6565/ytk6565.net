@@ -1,0 +1,47 @@
+name: 'Apps Web Tests'
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      - 'apps/web/**'
+      - 'packages/ui/**'
+      - 'packages/eslint-config-base/**'
+      - 'packages/eslint-config-react/**'
+      - 'packages/stylelint-config-base/**'
+      - 'packages/tailwindcss/**'
+      - 'packages/tsconfig/**'
+      - .github/workflows/pr-test-apps-web.yml
+    paths-ignore:
+      - '**/README.md'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: ./.github/actions/setup-node
+
+      - name: Format
+        id: format
+        run: pnpm --filter @ytk6565.net/web format
+
+      - name: Typecheck
+        id: typecheck
+        run: pnpm --filter @ytk6565.net/web typecheck
+
+      - name: Lint
+        id: lint
+        run: pnpm --filter @ytk6565.net/web lint
+
+      - name: Build
+        id: build
+        run: pnpm --filter @ytk6565.net/web build
