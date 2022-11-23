@@ -41,9 +41,9 @@ jobs:
         run: pnpm --filter @ytk6565.net/ui lint
 
       - name: Unit test
-        id: build
+        id: unit-test
         run: pnpm --filter @ytk6565.net/ui test -- run
 
       - name: Build Storybook
-        id: build
+        id: build-storybook
         run: pnpm --filter @ytk6565.net/ui build-storybook
