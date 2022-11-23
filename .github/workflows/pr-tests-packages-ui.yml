@@ -1,4 +1,4 @@
-name: 'Apps Web Tests'
+name: 'Packages UI Tests'
 
 on:
   pull_request:
@@ -12,9 +12,8 @@ on:
       - 'packages/stylelint-config-base/**'
       - 'packages/tailwindcss/**'
       - 'packages/tsconfig/**'
-      - .github/workflows/pr-test-apps-web.yml
-    paths-ignore:
-      - '**/README.md'
+      - .github/workflows/pr-test-packages-ui.yml
+      - '!**/README.md'
 
 jobs:
   build:
@@ -42,9 +41,9 @@ jobs:
         run: pnpm --filter @ytk6565.net/ui lint
 
       - name: Unit test
-        id: build
-        run: pnpm --filter @ytk6565.net/ui test
+        id: unit-test
+        run: pnpm --filter @ytk6565.net/ui test -- run
 
       - name: Build Storybook
-        id: build
+        id: build-storybook
         run: pnpm --filter @ytk6565.net/ui build-storybook

@@ -14,8 +14,7 @@ on:
       - 'packages/tailwindcss/**'
       - 'packages/tsconfig/**'
       - .github/workflows/pr-test-apps-web.yml
-    paths-ignore:
-      - '**/README.md'
+      - '!**/README.md'
 
 jobs:
   build:

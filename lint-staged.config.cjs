@@ -17,7 +17,7 @@ module.exports = {
     'pnpm --filter @ytk6565.net/ui lint:styles --fix',
     `git add ${filenames.join(' ')}`,
   ],
-  '**/*.{html,js,jsx,ts,tsx,cjs,mjs,json,css}': (filenames) => [
+  '**/*.{html,css,js,jsx,ts,tsx,cjs,mjs,json,yml}': (filenames) => [
     `prettier --write ${filenames.join(' ')}`,
     `git add ${filenames.join(' ')}`,
   ],
