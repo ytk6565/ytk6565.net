@@ -12,7 +12,7 @@ on:
       - 'packages/stylelint-config-base/**'
       - 'packages/tailwindcss/**'
       - 'packages/tsconfig/**'
-      - .github/workflows/pr-test-apps-web.yml
+      - .github/workflows/pr-test-packages-ui.yml
       - '!**/README.md'
 
 jobs:
