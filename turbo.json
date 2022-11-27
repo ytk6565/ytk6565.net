@@ -22,7 +22,7 @@
       "outputs": []
     },
     "dev": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^dev"],
       "outputs": ["dist/**"],
       "cache": false
     }

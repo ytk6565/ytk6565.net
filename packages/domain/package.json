@@ -10,9 +10,11 @@
     }
   },
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc -p tsconfig.build.json",
-    "postbuild": "tsc-alias -p tsconfig.build.json",
+    "dev": "npm-run-all --serial clean --parallel 'build:* -w'",
+    "build": "npm-run-all --serial clean build:*",
+    "build:generate": "tsc -p tsconfig.build.json",
+    "build:resolve-alias": "tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf dist",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
