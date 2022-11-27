@@ -3,9 +3,8 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
-  "extends": "@ytk6565.net/tsconfig/vite.json",
-  "include": ["."],
-  "exclude": ["dist", "build"]
+  "extends": "@ytk6565.net/tsconfig/base.json"
 }

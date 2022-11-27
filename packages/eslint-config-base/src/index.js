@@ -6,8 +6,19 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   plugins: ['import', 'no-floating-promise'],
+  ignorePatterns: ['dist/**/*'],
   rules: {
+    'no-console': 'error',
+    'import/no-unresolved': 'error',
     'no-floating-promise/no-floating-promise': 2,
+  },
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {},
+    },
   },
   overrides: [
     {

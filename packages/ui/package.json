@@ -40,6 +40,7 @@
     "@types/react-dom": "18.0.9",
     "@vitejs/plugin-react": "2.2.0",
     "@ytk6565.net/assets": "workspace:*",
+    "@ytk6565.net/domain": "workspace:*",
     "@ytk6565.net/eslint-config-react": "workspace:*",
     "@ytk6565.net/stylelint-config-base": "workspace:*",
     "@ytk6565.net/tailwindcss": "workspace:*",

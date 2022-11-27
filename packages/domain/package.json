@@ -1,0 +1,31 @@
+{
+  "name": "@ytk6565.net/domain",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./dist/*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js"
+    }
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "postbuild": "tsc-alias -p tsconfig.build.json",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@ytk6565.net/eslint-config-base": "workspace:*",
+    "@ytk6565.net/tsconfig": "workspace:*",
+    "rimraf": "3.0.2",
+    "tsc-alias": "1.7.1",
+    "typescript": "4.8.4",
+    "vite-tsconfig-paths": "3.5.2",
+    "vitest": "0.25.1"
+  }
+}

@@ -7,6 +7,7 @@
     "@typescript-eslint/eslint-plugin": "5.42.1",
     "@typescript-eslint/parser": "5.42.1",
     "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "3.5.2",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-no-floating-promise": "1.0.2",
     "eslint-plugin-prettier": "4.2.1",
