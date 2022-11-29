@@ -24,6 +24,7 @@ module.exports = {
     {
       files: ['**/*.cjs'],
       env: {
+        node: true,
         commonjs: true,
       },
       rules: {

@@ -38,3 +38,6 @@ coverage
 
 # turbo
 .turbo
+
+# env
+.env
