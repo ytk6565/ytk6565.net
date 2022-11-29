@@ -31,8 +31,8 @@ jobs:
         id: setup-node
         uses: ./.github/actions/setup-node
 
-      - name: Build
-        id: build
+      - name: Build dependencies
+        id: build-dependencies
         run: pnpm run build --filter @ytk6565.net/web
 
       - name: Format
@@ -50,7 +50,3 @@ jobs:
       - name: Stylelint
         id: stylelint
         run: pnpm --filter @ytk6565.net/web stylelint
-
-      - name: Build
-        id: build
-        run: pnpm --filter @ytk6565.net/web build

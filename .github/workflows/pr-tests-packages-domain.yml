@@ -25,10 +25,6 @@ jobs:
         id: setup-node
         uses: ./.github/actions/setup-node
 
-      - name: Build
-        id: build
-        run: pnpm run build --filter @ytk6565.net/domain
-
       - name: Format
         id: format
         run: pnpm --filter @ytk6565.net/domain format
@@ -41,6 +37,6 @@ jobs:
         id: lint
         run: pnpm --filter @ytk6565.net/domain lint
 
-      - name: Unit test
-        id: unit-test
-        run: pnpm --filter @ytk6565.net/domain test -- run
+      # - name: Unit test
+      #   id: unit-test
+      #   run: pnpm --filter @ytk6565.net/domain test -- run

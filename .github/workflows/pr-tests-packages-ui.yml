@@ -29,8 +29,8 @@ jobs:
         id: setup-node
         uses: ./.github/actions/setup-node
 
-      - name: Build
-        id: build
+      - name: Build dependencies
+        id: build-dependencies
         run: pnpm run build --filter @ytk6565.net/ui
 
       - name: Format
