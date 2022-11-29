@@ -1,4 +1,4 @@
-import { Button } from '.';
+import { Button } from '..';
 
 import type { StoryObj, Meta } from '@storybook/react';
 

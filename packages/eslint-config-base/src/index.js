@@ -9,6 +9,7 @@ module.exports = {
   ignorePatterns: ['dist/**/*'],
   rules: {
     'no-console': 'error',
+    'no-restricted-imports': ['error', { patterns: ['..*'] }],
     'import/no-unresolved': 'error',
     'no-floating-promise/no-floating-promise': 2,
     '@typescript-eslint/consistent-type-imports': 'error',
@@ -30,6 +31,25 @@ module.exports = {
       },
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: [
+        'coverage/**',
+        'dist/**',
+        '**/*.d.ts',
+        'test{,s}/**',
+        'test{,-*}.{js,cjs,mjs,ts,tsx,jsx}',
+        '**/*{.,-}test.{js,cjs,mjs,ts,tsx,jsx}',
+        '**/*{.,-}spec.{js,cjs,mjs,ts,tsx,jsx}',
+        '**/__tests__/**',
+        'stories/**',
+        'stories{,-*}.{js,cjs,mjs,ts,tsx,jsx,mdx}',
+        '**/__mocks__/**',
+        '**/__stories__/**',
+      ],
+      rules: {
+        'no-restricted-imports': 'off',
       },
     },
     {

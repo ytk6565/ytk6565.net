@@ -1,4 +1,4 @@
-import { SocialList } from '../../organisms/SocialList';
+import { SocialList } from '@/components/organisms/SocialList';
 
 import type { FC } from 'react';
 
