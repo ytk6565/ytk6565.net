@@ -8,6 +8,8 @@ on:
     paths:
       - 'apps/web/**'
       - 'packages/ui/**'
+      - 'packages/domain/**'
+      - 'packages/infrastructure/**'
       - 'packages/eslint-config-base/**'
       - 'packages/eslint-config-react/**'
       - 'packages/stylelint-config-base/**'

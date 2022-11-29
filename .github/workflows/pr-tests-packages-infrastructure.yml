@@ -1,0 +1,47 @@
+name: 'Packages Infrastructure Tests'
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      - 'packages/infrastructure/**'
+      - 'packages/domain/**'
+      - 'packages/eslint-config-base/**'
+      - 'packages/tsconfig/**'
+      - .github/workflows/pr-test-packages-infrastructure.yml
+      - '!**/README.md'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: ./.github/actions/setup-node
+
+      - name: Contentful TypeScript Codegen
+        id: contentful-typescript-codegen
+        uses: pnpm --filter @ytk6565.net/infrastructure contentful-typescript-codegen
+
+      - name: Format
+        id: format
+        run: pnpm --filter @ytk6565.net/infrastructure format
+
+      - name: Typecheck
+        id: typecheck
+        run: pnpm --filter @ytk6565.net/infrastructure typecheck
+
+      - name: Lint
+        id: lint
+        run: pnpm --filter @ytk6565.net/infrastructure lint
+
+      - name: Unit test
+        id: unit-test
+        run: pnpm --filter @ytk6565.net/infrastructure test -- run
