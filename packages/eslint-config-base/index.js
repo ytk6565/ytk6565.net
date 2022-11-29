@@ -43,9 +43,9 @@ module.exports = {
         '**/*{.,-}test.{js,cjs,mjs,ts,tsx,jsx}',
         '**/*{.,-}spec.{js,cjs,mjs,ts,tsx,jsx}',
         '**/__tests__/**',
+        '**/__mocks__/**',
         'stories/**',
         'stories{,-*}.{js,cjs,mjs,ts,tsx,jsx,mdx}',
-        '**/__mocks__/**',
         '**/__stories__/**',
       ],
       rules: {
