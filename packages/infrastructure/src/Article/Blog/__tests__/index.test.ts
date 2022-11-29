@@ -1,7 +1,9 @@
 import { blogApiClientFactory } from '..';
 import { RESPONSE } from '../__mocks__';
 
-import { restHandlerFactory, MockType } from '@/__tests__/restHandlerFactory';
+import type { MockType } from '@/__tests__/restHandlerFactory';
+
+import { restHandlerFactory } from '@/__tests__/restHandlerFactory';
 import { setupMockServer } from '@/__tests__/setupMockServer';
 
 describe('Article/Blog', () => {

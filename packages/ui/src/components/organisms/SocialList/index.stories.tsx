@@ -1,6 +1,6 @@
-import { StoryObj, Meta } from '@storybook/react';
-
 import { SocialList } from '.';
+
+import type { StoryObj, Meta } from '@storybook/react';
 
 export default {
   title: 'organisms/SocialList',

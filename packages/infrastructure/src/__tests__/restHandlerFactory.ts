@@ -1,14 +1,15 @@
-import {
+import { rest } from 'msw';
+
+import type {
   PathParams,
   RequestHandler,
   ResponseComposition,
   ResponseResolver,
-  rest,
   RestContext,
   RestRequest,
   DefaultBodyType,
 } from 'msw';
-import { Mock } from 'vitest';
+import type { Mock } from 'vitest';
 
 export const restHandlerFactory = <
   T extends DefaultBodyType, // Request body type

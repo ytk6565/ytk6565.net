@@ -11,6 +11,7 @@ module.exports = {
     'no-console': 'error',
     'import/no-unresolved': 'error',
     'no-floating-promise/no-floating-promise': 2,
+    '@typescript-eslint/consistent-type-imports': 'error',
   },
   settings: {
     'import/parsers': {

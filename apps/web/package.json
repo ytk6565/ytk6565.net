@@ -9,9 +9,8 @@
     "preview": "vite preview",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "typecheck": "tsc --noEmit",
-    "lint:scripts": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
-    "lint:styles": "stylelint **/*.css --ignore-path .gitignore --allow-empty-input",
-    "lint": "pnpm lint:scripts && pnpm lint:styles"
+    "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
+    "stylelint": "stylelint **/*.css --ignore-path .gitignore --allow-empty-input"
   },
   "dependencies": {
     "@ytk6565.net/assets": "workspace:*",

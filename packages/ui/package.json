@@ -12,9 +12,8 @@
     "build-storybook": "storybook build",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "typecheck": "tsc --noEmit",
-    "lint:scripts": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
-    "lint:styles": "stylelint **/*.css --ignore-path .gitignore",
-    "lint": "pnpm lint:scripts && pnpm lint:styles"
+    "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
+    "stylelint": "stylelint **/*.css --ignore-path .gitignore"
   },
   "devDependencies": {
     "@mdx-js/react": "2.1.5",

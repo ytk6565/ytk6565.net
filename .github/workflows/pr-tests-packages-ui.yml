@@ -40,6 +40,10 @@ jobs:
         id: lint
         run: pnpm --filter @ytk6565.net/ui lint
 
+      - name: Stylelint
+        id: stylelint
+        run: pnpm --filter @ytk6565.net/web stylelint
+
       - name: Unit test
         id: unit-test
         run: pnpm --filter @ytk6565.net/ui test -- run

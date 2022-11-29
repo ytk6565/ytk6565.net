@@ -41,6 +41,10 @@ jobs:
         id: lint
         run: pnpm --filter @ytk6565.net/web lint
 
+      - name: Stylelint
+        id: stylelint
+        run: pnpm --filter @ytk6565.net/web stylelint
+
       - name: Build
         id: build
         run: pnpm --filter @ytk6565.net/web build

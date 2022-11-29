@@ -1,12 +1,12 @@
-import {
+import z from 'zod';
+
+import type { IPostsFields } from '@/types/generated/contentful';
+import type {
   Article,
   FetchArticle,
   FetchArticleItems,
 } from '@ytk6565.net/domain/dist/Article';
-import { Entry } from 'contentful';
-import z from 'zod';
-
-import { IPostsFields } from '@/types/generated/contentful';
+import type { Entry } from 'contentful';
 
 type Blog = {
   sys: {

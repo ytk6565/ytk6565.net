@@ -1,5 +1,6 @@
-import { RequestHandler } from 'msw';
 import { setupServer } from 'msw/node';
+
+import type { RequestHandler } from 'msw';
 
 export const setupMockServer = (...handlers: Array<RequestHandler>) => {
   const server = setupServer(...handlers);

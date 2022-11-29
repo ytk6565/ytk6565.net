@@ -18,6 +18,9 @@
     "lint": {
       "outputs": []
     },
+    "stylelint": {
+      "outputs": []
+    },
     "typecheck": {
       "outputs": []
     },
