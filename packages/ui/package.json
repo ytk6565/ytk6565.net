@@ -15,6 +15,9 @@
     "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
     "stylelint": "stylelint **/*.css --ignore-path .gitignore"
   },
+  "dependencies": {
+    "@ytk6565.net/domain": "workspace:*"
+  },
   "devDependencies": {
     "@mdx-js/react": "2.1.5",
     "@storybook/addon-actions": "7.0.0-alpha.48",

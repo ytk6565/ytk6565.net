@@ -232,6 +232,8 @@ importers:
       vite-plugin-fonts: 0.6.0
       vite-tsconfig-paths: 3.5.2
       vitest: 0.25.1
+    dependencies:
+      '@ytk6565.net/domain': link:../domain
     devDependencies:
       '@mdx-js/react': 2.1.5_react@18.2.0
       '@storybook/addon-actions': 7.0.0-alpha.48_biqbaboplfbrettd7655fr4n2y
@@ -256,7 +258,6 @@ importers:
       '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0_vite@3.2.3
       '@ytk6565.net/assets': link:../assets
-      '@ytk6565.net/domain': link:../domain
       '@ytk6565.net/eslint-config-react': link:../eslint-config-react
       '@ytk6565.net/stylelint-config-base': link:../stylelint-config-base
       '@ytk6565.net/tailwindcss': link:../tailwindcss
