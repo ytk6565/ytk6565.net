@@ -2,10 +2,21 @@
   "name": "@ytk6565.net/ui",
   "version": "0.0.0",
   "type": "module",
-  "main": "./src/index.tsx",
-  "types": "./src/index.tsx",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
+    "dev": "npm-run-all --parallel dev:main 'build:types -w'",
+    "dev:main": "vite -h",
+    "build": "npm-run-all --serial build:*",
+    "build:main": "vite build",
+    "build:types": "tsc -p tsconfig.build.json",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
