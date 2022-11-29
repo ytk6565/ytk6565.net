@@ -28,7 +28,7 @@ jobs:
 
       - name: Contentful TypeScript Codegen
         id: contentful-typescript-codegen
-        uses: pnpm --filter @ytk6565.net/infrastructure contentful-typescript-codegen
+        run: pnpm --filter @ytk6565.net/infrastructure contentful-typescript-codegen
 
       - name: Format
         id: format
