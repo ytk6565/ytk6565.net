@@ -4,9 +4,10 @@ import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
 import { VitePluginFonts } from 'vite-plugin-fonts';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
@@ -14,7 +15,16 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'react-dom'],
+      plugins: [
+        mode === 'analyze' &&
+          visualizer({
+            open: true,
+            filename: 'dist/stats.html',
+            gzipSize: true,
+            brotliSize: true,
+          }),
+      ],
     },
   },
   plugins: [
@@ -32,4 +42,4 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
-});
+}));

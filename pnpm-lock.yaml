@@ -40,6 +40,7 @@ importers:
       '@ytk6565.net/ui': workspace:*
       react: 18.2.0
       react-dom: 18.2.0
+      rollup-plugin-visualizer: 5.8.3
       stylelint: 14.15.0
       typescript: 4.8.4
       vite: 3.2.3
@@ -63,6 +64,7 @@ importers:
       '@ytk6565.net/eslint-config-react': link:../../packages/eslint-config-react
       '@ytk6565.net/stylelint-config-base': link:../../packages/stylelint-config-base
       '@ytk6565.net/tsconfig': link:../../packages/tsconfig
+      rollup-plugin-visualizer: 5.8.3
       stylelint: 14.15.0
       typescript: 4.8.4
       vite: 3.2.3_@types+node@18.11.9
@@ -224,6 +226,7 @@ importers:
       happy-dom: 7.7.0
       react: 18.2.0
       react-dom: 18.2.0
+      rollup-plugin-visualizer: 5.8.3
       storybook: 7.0.0-alpha.48
       stylelint: 14.15.0
       typescript: 4.8.4
@@ -266,6 +269,7 @@ importers:
       happy-dom: 7.7.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      rollup-plugin-visualizer: 5.8.3
       storybook: 7.0.0-alpha.48_yalvw3r2waubxycyb7k7qsruca
       stylelint: 14.15.0
       typescript: 4.8.4
@@ -11317,6 +11321,21 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+
+  /rollup-plugin-visualizer/5.8.3:
+    resolution: {integrity: sha512-QGJk4Bqe4AOat5AjipOh8esZH1nck5X2KFpf4VytUdSUuuuSwvIQZjMGgjcxe/zXexltqaXp5Vx1V3LmnQH15Q==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      rollup: 2.x || 3.x
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      open: 8.4.0
+      source-map: 0.7.4
+      yargs: 17.6.2
+    dev: true
 
   /rollup/2.79.1:
     resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
