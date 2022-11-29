@@ -25,6 +25,10 @@ jobs:
         id: setup-node
         uses: ./.github/actions/setup-node
 
+      - name: Build
+        id: build
+        run: pnpm run build --filter @ytk6565.net/domain
+
       - name: Format
         id: format
         run: pnpm --filter @ytk6565.net/domain format
