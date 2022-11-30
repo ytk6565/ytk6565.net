@@ -13,3 +13,8 @@ runs:
 
     - run: pnpm i --frozen-lockfile
       shell: bash
+      env:
+        CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+        CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+        CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}
+        CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}

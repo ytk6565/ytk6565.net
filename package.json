@@ -24,7 +24,9 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "dev": "turbo run dev --parallel",
-    "devPreinstall": "husky install"
+    "prepare": "npm-run-all --parallel husky contentful-typescript-codegen",
+    "husky": "husky install",
+    "contentful-typescript-codegen": "pnpm --filter @ytk6565.net/infrastructure contentful-typescript-codegen"
   },
   "devDependencies": {
     "@commitlint/cli": "17.2.0",
