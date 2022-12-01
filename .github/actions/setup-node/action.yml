@@ -29,7 +29,6 @@ runs:
       shell: bash
       run: |
         echo "${{ env.CONTENTFUL_SPACE_ID }}"
-        echo "${{ secrets.CONTENTFUL_SPACE_ID }}"
         echo "${{ inputs.CONTENTFUL_SPACE_ID }}"
 
     - run: pnpm i --frozen-lockfile
