@@ -1,5 +1,19 @@
 name: 'Setup Node.js'
 
+inputs:
+  CONTENTFUL_SPACE_ID:
+    description: Contentful space id
+    required: true
+  CONTENTFUL_ENVIRONMENT:
+    description: Contentful environment
+    required: true
+  CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN:
+    description: Contentful management api access token
+    required: true
+  CONTENTFUL_DELIVERY_TOKEN:
+    description: Contentful delivery token
+    required: true
+
 runs:
   using: 'composite'
   steps:
@@ -12,9 +26,9 @@ runs:
         cache: 'pnpm'
 
     - run: pnpm i --frozen-lockfile
-      shell: bash
       env:
-        CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-        CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
-        CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}
-        CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+        CONTENTFUL_SPACE_ID: ${{ inputs.CONTENTFUL_SPACE_ID }}
+        CONTENTFUL_ENVIRONMENT: ${{ inputs.CONTENTFUL_ENVIRONMENT }}
+        CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN: ${{ inputs.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}
+        CONTENTFUL_DELIVERY_TOKEN: ${{ inputs.CONTENTFUL_DELIVERY_TOKEN }}
+      shell: bash
