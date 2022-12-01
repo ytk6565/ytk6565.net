@@ -53,6 +53,7 @@
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "@vitejs/plugin-react": "2.2.0",
+    "@vitest/coverage-c8": "0.25.3",
     "@ytk6565.net/assets": "workspace:*",
     "@ytk6565.net/domain": "workspace:*",
     "@ytk6565.net/eslint-config-react": "workspace:*",

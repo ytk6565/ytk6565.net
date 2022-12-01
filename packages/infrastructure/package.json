@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@contentful/rich-text-types": "15.14.1",
+    "@vitest/coverage-c8": "0.25.3",
     "@ytk6565.net/eslint-config-base": "workspace:*",
     "@ytk6565.net/tsconfig": "workspace:*",
     "contentful": "9.2.13",
