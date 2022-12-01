@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationMap": false,
+    "declarationDir": "./dist"
+  },
+  "extends": "./tsconfig.json",
+  "include": ["src"],
+  "exclude": [
+    "coverage/**",
+    "dist/**",
+    "test{,s}/**",
+    "test{,-*}.{js,cjs,mjs,ts,tsx,jsx}",
+    "**/*{.,-}test.{js,cjs,mjs,ts,tsx,jsx}",
+    "**/*{.,-}spec.{js,cjs,mjs,ts,tsx,jsx}",
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "stories/**",
+    "stories{,-*}.{js,cjs,mjs,ts,tsx,jsx,mdx}",
+    "**/__stories__/**"
+  ]
+}

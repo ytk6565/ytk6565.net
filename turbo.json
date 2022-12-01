@@ -5,19 +5,28 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "test": {
+      "dependsOn": ["build"],
+      "outputs": [],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "tests/**/*.ts",
+        "tests/**/*.tsx"
+      ]
+    },
     "lint": {
       "outputs": []
     },
-    "lint:scripts": {
-      "outputs": []
-    },
-    "lint:styles": {
+    "stylelint": {
       "outputs": []
     },
     "typecheck": {
       "outputs": []
     },
     "dev": {
+      "dependsOn": ["^dev"],
+      "outputs": ["dist/**"],
       "cache": false
     }
   }

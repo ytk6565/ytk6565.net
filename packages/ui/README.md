@@ -18,6 +18,12 @@ $ pnpm --filter @ytk6565.net/ui typecheck
 $ pnpm --filter @ytk6565.net/ui lint
 ```
 
+## Stylelint
+
+```bash
+$ pnpm --filter @ytk6565.net/ui stylelint
+```
+
 ## Unit test
 
 ```bash

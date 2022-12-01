@@ -1,0 +1,56 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "../",
+    },
+    {
+      "name": "GitHub Actions",
+      "path": "../.github/",
+    },
+    {
+      "name": "VSCode",
+      "path": "../.vscode/",
+    },
+    {
+      "name": "Web",
+      "path": "../apps/web/"
+    },
+    {
+      "name": "UI",
+      "path": "../packages/ui/"
+    },
+    {
+      "name": "Domain",
+      "path": "../packages/domain/"
+    },
+    {
+      "name": "Infrastructure",
+      "path": "../packages/infrastructure/"
+    },
+    {
+      "name": "Tailwind CSS",
+      "path": "../packages/tailwindcss/"
+    },
+    {
+      "name": "TSConfig",
+      "path": "../packages/tsconfig/"
+    },
+    {
+      "name": "ESLint config base",
+      "path": "../packages/eslint-config-base/"
+    },
+    {
+      "name": "ESLint config react",
+      "path": "../packages/eslint-config-react/"
+    }
+  ],
+	"settings": {
+		"files.exclude": {
+      ".github/": true,
+      ".vscode/": true,
+			"apps/": true,
+			"packages/": true,
+		}
+	}
+}

@@ -8,6 +8,8 @@ on:
     paths:
       - 'apps/web/**'
       - 'packages/ui/**'
+      - 'packages/domain/**'
+      - 'packages/infrastructure/**'
       - 'packages/eslint-config-base/**'
       - 'packages/eslint-config-react/**'
       - 'packages/stylelint-config-base/**'
@@ -28,6 +30,15 @@ jobs:
       - name: Setup Node.js
         id: setup-node
         uses: ./.github/actions/setup-node
+        with:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+          CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+
+      - name: Build dependencies
+        id: build-dependencies
+        run: pnpm run build --filter @ytk6565.net/web
 
       - name: Format
         id: format
@@ -41,6 +52,6 @@ jobs:
         id: lint
         run: pnpm --filter @ytk6565.net/web lint
 
-      - name: Build
-        id: build
-        run: pnpm --filter @ytk6565.net/web build
+      - name: Stylelint
+        id: stylelint
+        run: pnpm --filter @ytk6565.net/web stylelint

@@ -1,8 +1,6 @@
-import { SocialList } from '../../organisms/SocialList';
+import { SocialList } from '@/components/organisms/SocialList';
 
 import type { FC } from 'react';
-
-// test ci
 
 export const Home: FC = () => (
   <main className="pt-64 pb-64">

@@ -9,10 +9,10 @@
     "tailwindcss": "3.2.4"
   },
   "exports": {
-    "./config": "./src/tailwind.config.js",
-    "./style": "./src/style.css",
-    "./postcss": "./src/postcss.config.js",
-    "./stylelint": "./src/stylelint.config.js"
+    "./config": "./tailwind.config.js",
+    "./style": "./style.css",
+    "./postcss": "./postcss.config.js",
+    "./stylelint": "./stylelint.config.js"
   },
   "publishConfig": {
     "access": "public"

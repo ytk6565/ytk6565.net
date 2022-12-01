@@ -1,0 +1,47 @@
+name: 'Packages Domain Tests'
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      - 'packages/domain/**'
+      - 'packages/eslint-config-base/**'
+      - 'packages/tsconfig/**'
+      - .github/workflows/pr-test-packages-domain.yml
+      - '!**/README.md'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        id: setup-node
+        uses: ./.github/actions/setup-node
+        with:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+          CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
+
+      - name: Format
+        id: format
+        run: pnpm --filter @ytk6565.net/domain format
+
+      - name: Typecheck
+        id: typecheck
+        run: pnpm --filter @ytk6565.net/domain typecheck
+
+      - name: Lint
+        id: lint
+        run: pnpm --filter @ytk6565.net/domain lint
+
+      # - name: Unit test
+      #   id: unit-test
+      #   run: pnpm --filter @ytk6565.net/domain test -- run

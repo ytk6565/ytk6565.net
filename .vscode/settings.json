@@ -1,5 +1,8 @@
 {
   "eslint.packageManager": "pnpm",
   "npm.packageManager": "pnpm",
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "files.associations": {
+    "turbo.json": "json5"
+  }
 }

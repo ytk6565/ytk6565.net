@@ -16,6 +16,7 @@ dist-ssr
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
+!.vscode/*.code-workspace
 .idea
 .DS_Store
 *.suo
@@ -38,3 +39,6 @@ coverage
 
 # turbo
 .turbo
+
+# env
+.env
