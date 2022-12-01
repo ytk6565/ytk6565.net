@@ -5,6 +5,14 @@
       "path": "../",
     },
     {
+      "name": "GitHub Actions",
+      "path": "../.github/",
+    },
+    {
+      "name": "VSCode",
+      "path": "../.vscode/",
+    },
+    {
       "name": "Web",
       "path": "../apps/web/"
     },
@@ -39,6 +47,8 @@
   ],
 	"settings": {
 		"files.exclude": {
+      ".github/": true,
+      ".vscode/": true,
 			"apps/": true,
 			"packages/": true,
 		}
