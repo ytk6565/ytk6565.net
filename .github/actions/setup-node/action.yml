@@ -25,12 +25,6 @@ runs:
         node-version-file: '.node-version'
         cache: 'pnpm'
 
-    - name:
-      shell: bash
-      run: |
-        echo "${{ env.CONTENTFUL_SPACE_ID }}"
-        echo "${{ inputs.CONTENTFUL_SPACE_ID }}"
-
     - run: pnpm i --frozen-lockfile
       env:
         CONTENTFUL_SPACE_ID: ${{ inputs.CONTENTFUL_SPACE_ID }}
