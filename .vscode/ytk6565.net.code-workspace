@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "../",
+    },
+    {
+      "name": "Web",
+      "path": "../apps/web/"
+    },
+    {
+      "name": "UI",
+      "path": "../packages/ui/"
+    },
+    {
+      "name": "Domain",
+      "path": "../packages/domain/"
+    },
+    {
+      "name": "Infrastructure",
+      "path": "../packages/infrastructure/"
+    },
+    {
+      "name": "Tailwind CSS",
+      "path": "../packages/tailwindcss/"
+    },
+    {
+      "name": "TSConfig",
+      "path": "../packages/tsconfig/"
+    },
+    {
+      "name": "ESLint config base",
+      "path": "../packages/eslint-config-base/"
+    },
+    {
+      "name": "ESLint config react",
+      "path": "../packages/eslint-config-react/"
+    }
+  ],
+	"settings": {
+		"files.exclude": {
+			"apps/": true,
+			"packages/": true,
+		}
+	}
+}
