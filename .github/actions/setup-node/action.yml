@@ -28,10 +28,8 @@ runs:
     - name:
       shell: bash
       run: |
+        echo "${{ env.CONTENTFUL_SPACE_ID }}"
         echo "${{ inputs.CONTENTFUL_SPACE_ID }}"
-        echo "${{ inputs.CONTENTFUL_ENVIRONMENT }}"
-        echo "${{ inputs.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}"
-        echo "${{ inputs.CONTENTFUL_DELIVERY_TOKEN }}"
 
     - run: pnpm i --frozen-lockfile
       env:
