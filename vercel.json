@@ -3,10 +3,5 @@
   "github": {
     "enabled": false,
     "silent": true
-  },
-  "buildCommand": "pnpm build",
-  "ignoreCommand": "bash scripts/vercel-ignore-build-step.sh",
-  "framework": "vite",
-  "installCommand": "pnpm i --frozen-lockfile",
-  "outputDirectory": "apps/web/dist"
+  }
 }
