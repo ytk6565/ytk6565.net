@@ -1,0 +1,7 @@
+name: 'Install dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    - run: pnpm i --frozen-lockfile
+      shell: bash
