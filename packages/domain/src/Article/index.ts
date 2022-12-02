@@ -15,7 +15,7 @@ export const articleSchema = z.object({
 });
 
 /**
- * 投稿のアイテムのスキーマ
+ * 投稿アイテムのスキーマ
  */
 export const articleItemSchema = articleSchema.omit({ body: true });
 
@@ -25,7 +25,7 @@ export const articleItemSchema = articleSchema.omit({ body: true });
 export type Article = z.infer<typeof articleSchema>;
 
 /**
- * 投稿のアイテム
+ * 投稿アイテム
  */
 export type ArticleItem = z.infer<typeof articleItemSchema>;
 
