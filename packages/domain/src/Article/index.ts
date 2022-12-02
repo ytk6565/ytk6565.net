@@ -11,7 +11,7 @@ export const articleSchema = z.object({
   permalink: z.string(),
   thumbnail: z.string().optional(),
   createdAt: z.string(),
-  updatedAt: z.number(),
+  updatedAt: z.string(),
 });
 
 /**
