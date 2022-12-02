@@ -16,14 +16,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+      - name: Setup Node.js
+        uses: ./.github/actions/setup-node
+        with:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+          CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
 
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build
+        run: pnpm build
 
-      - name: Build Project Artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }} --CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }} --CONTENTFUL_ENVIRONMENT=${{ secrets.CONTENTFUL_ENVIRONMENT }} --CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN=${{ secrets.CONTENTFUL_MANAGEMENT_API_ACCESS_TOKEN }} --CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
-
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - uses: amondnet/vercel-action@v20
+        if: github.event_name == 'push'
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Required
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Required
+          working-directory: ./apps/web/dist

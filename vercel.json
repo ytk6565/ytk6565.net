@@ -1,9 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "github": {
+    "enabled": false,
     "silent": true
   },
-  "buildCommand": "pnpm --filter @ytk6565.net/web build",
+  "buildCommand": "pnpm build",
   "ignoreCommand": "bash scripts/vercel-ignore-build-step.sh",
   "framework": "vite",
   "installCommand": "pnpm i --frozen-lockfile",
