@@ -1,3 +1,22 @@
-export * from './atoms/Button';
-export * from './organisms/SocialList/';
-export * from './pages/Home/';
+import Button from './atoms/Button';
+import SocialList from './organisms/SocialList';
+import Home from './pages/Home';
+
+export {
+  /**
+   * Atoms
+   */
+  Button,
+  /**
+   * Molecules
+   */
+
+  /**
+   * Organisms
+   */
+  SocialList,
+  /**
+   * Pages
+   */
+  Home,
+};

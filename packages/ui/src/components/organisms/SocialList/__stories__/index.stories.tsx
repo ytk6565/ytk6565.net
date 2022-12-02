@@ -1,4 +1,4 @@
-import { SocialList } from '..';
+import SocialList from '..';
 
 import type { StoryObj, Meta } from '@storybook/react';
 

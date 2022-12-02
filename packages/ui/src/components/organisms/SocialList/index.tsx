@@ -44,7 +44,7 @@ const links: Record<string, Link> = {
   },
 };
 
-export const SocialList: FC<{ className: string }> = (props) => {
+const SocialList: FC<{ className: string }> = (props) => {
   return (
     <ul
       className={`flex items-center justify-center -ml-8 -mr-8 ${props.className}`}
@@ -72,3 +72,5 @@ export const SocialList: FC<{ className: string }> = (props) => {
     </ul>
   );
 };
+
+export default SocialList;

@@ -1,4 +1,4 @@
-import { Home } from '..';
+import Home from '..';
 
 import type { StoryObj, Meta } from '@storybook/react';
 

@@ -1,8 +1,8 @@
-import { SocialList } from '@/components/organisms/SocialList';
+import SocialList from '@/components/organisms/SocialList';
 
 import type { FC } from 'react';
 
-export const Home: FC = () => (
+const Home: FC = () => (
   <main className="pt-64 pb-64">
     <div className="container pr-24 pl-24">
       <h2 className="mb-16 text-center text-2xl">Yutaka Kaneko</h2>
@@ -53,3 +53,5 @@ export const Home: FC = () => (
     </div>
   </main>
 );
+
+export default Home;
