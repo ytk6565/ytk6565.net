@@ -25,29 +25,25 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        id: checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        id: setup-node
-        uses: ./.github/actions/setup-node
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-pnpm
+
+      - name: Install dependencies
+        uses: ./.github/actions/install-dependencies
 
       - name: Build dependencies
-        id: build-dependencies
         run: pnpm run build --filter @ytk6565.net/infrastructure
 
       - name: Format
-        id: format
         run: pnpm --filter @ytk6565.net/infrastructure format
 
       - name: Typecheck
-        id: typecheck
         run: pnpm --filter @ytk6565.net/infrastructure typecheck
 
       - name: Lint
-        id: lint
         run: pnpm --filter @ytk6565.net/infrastructure lint
 
       - name: Unit test
-        id: unit-test
         run: pnpm --filter @ytk6565.net/infrastructure test -- run

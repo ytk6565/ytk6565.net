@@ -12,6 +12,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - dev
 
 jobs:
   Deploy:
@@ -20,14 +23,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: pnpm/action-setup@v2
-        with:
-          version: '>=7'
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: '.node-version'
-          cache: 'pnpm'
+      - name: Setup PNPM
+        uses: ./.github/actions/setup-pnpm
 
       - name: Install Vercel CLI
         run: pnpm add -g vercel@latest
