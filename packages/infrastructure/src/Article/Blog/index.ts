@@ -3,6 +3,7 @@ import z from 'zod';
 import type { IPostsFields } from '@/types/generated/contentful';
 import type {
   Article,
+  ArticleItem,
   FetchArticle,
   FetchArticleItems,
 } from '@ytk6565.net/domain/dist/Article';
@@ -71,6 +72,23 @@ const toArticle = (entry: Blog): Article => {
 };
 
 /**
+ * ブログを記事アイテムに変換する
+ * @param entry Contentful の記事
+ * @returns 記事アイテム
+ */
+const toArticleItem = (entry: Blog): ArticleItem => {
+  return {
+    id: entry.sys.id,
+    title: entry.fields.title,
+    description: entry.fields.description,
+    thumbnail: entry.fields.thumbnail?.fields.file.url,
+    permalink: `/articles/blogs/${entry.sys.id}`,
+    createdAt: entry.sys.createdAt,
+    updatedAt: entry.sys.updatedAt,
+  };
+};
+
+/**
  * ブログの記事を取得する
  * @param fetcher ブログの記事を fetch する関数
  * @returns ブログの記事
@@ -98,7 +116,7 @@ const fetchBlogItems =
   async () => {
     const response = await fetcher();
     const data = await response.json();
-    const items: Article[] = [];
+    const items: ArticleItem[] = [];
 
     if (!Array.isArray(data.items)) {
       throw new Error('ブログの記事の一覧が不正です。');
@@ -110,7 +128,7 @@ const fetchBlogItems =
         throw new Error('ブログの記事の一覧が不正です。');
       }
 
-      items.push(toArticle(safeParseReturn.data));
+      items.push(toArticleItem(safeParseReturn.data));
     }
 
     return items;
