@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const contentfulManagement = require('contentful-management');
 
 module.exports = function () {

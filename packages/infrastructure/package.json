@@ -10,8 +10,8 @@
     }
   },
   "scripts": {
-    "dev": "npm-run-all --serial clean --parallel 'build:* -w'",
-    "build": "npm-run-all --serial clean build:*",
+    "dev": "dotenv -- npm-run-all --serial clean --parallel 'build:* -w'",
+    "build": "dotenv -- npm-run-all --serial clean build:*",
     "build:generate": "tsc -p tsconfig.build.json",
     "build:resolve-alias": "tsc-alias -p tsconfig.build.json",
     "clean": "rimraf dist",
@@ -20,7 +20,7 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
-    "contentful-typescript-codegen": "node ./config/contentful/typescript-codegen/command.cjs --output src/types/generated/contentful.d.ts"
+    "contentful-typescript-codegen": "dotenv -- node ./config/contentful/typescript-codegen/command.cjs --output src/types/generated/contentful.d.ts"
   },
   "dependencies": {
     "@ytk6565.net/domain": "workspace:*"
@@ -33,7 +33,7 @@
     "contentful": "9.2.13",
     "contentful-management": "10.21.5",
     "contentful-typescript-codegen": "3.3.0",
-    "dotenv": "16.0.3",
+    "dotenv-cli": "6.0.0",
     "happy-dom": "7.7.0",
     "msw": "0.49.0",
     "rimraf": "3.0.2",

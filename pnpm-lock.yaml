@@ -142,7 +142,7 @@ importers:
       contentful: 9.2.13
       contentful-management: 10.21.5
       contentful-typescript-codegen: 3.3.0
-      dotenv: 16.0.3
+      dotenv-cli: 6.0.0
       happy-dom: 7.7.0
       msw: 0.49.0
       rimraf: 3.0.2
@@ -160,7 +160,7 @@ importers:
       contentful: 9.2.13
       contentful-management: 10.21.5
       contentful-typescript-codegen: 3.3.0
-      dotenv: 16.0.3
+      dotenv-cli: 6.0.0
       happy-dom: 7.7.0
       msw: 0.49.0_typescript@4.8.4
       rimraf: 3.0.2
@@ -6369,8 +6369,23 @@ packages:
       is-obj: 2.0.0
     dev: true
 
+  /dotenv-cli/6.0.0:
+    resolution: {integrity: sha512-qXlCOi3UMDhCWFKe0yq5sg3X+pJAz+RQDiFN38AMSbUrnY3uZshSfDJUAge951OS7J9gwLZGfsBlWRSOYz/TRg==}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      dotenv: 16.0.3
+      dotenv-expand: 8.0.3
+      minimist: 1.2.7
+    dev: true
+
   /dotenv-expand/5.1.0:
     resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
+    dev: true
+
+  /dotenv-expand/8.0.3:
+    resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==}
+    engines: {node: '>=12'}
     dev: true
 
   /dotenv/16.0.3:
