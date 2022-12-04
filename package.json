@@ -7,6 +7,9 @@
     "pnpm": ">=7"
   },
   "pnpm": {
+    "overrides": {
+      "rollup": "2.79.1"
+    },
     "peerDependencyRules": {
       "ignoreMissing": [
         "@babel/*",

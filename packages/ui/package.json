@@ -3,21 +3,22 @@
   "version": "0.0.0",
   "type": "module",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+    "./dist/*": {
+      "import": "./dist/*/index.js",
+      "types": "./dist/*/index.d.ts"
     }
   },
   "scripts": {
-    "dev": "npm-run-all --parallel dev:main 'build:types -w'",
-    "dev:main": "vite build --watch",
-    "build": "npm-run-all --serial build:*",
-    "build:main": "vite build",
-    "build:types": "tsc -p tsconfig.build.json",
-    "analyze": "vite build --mode analyze",
+    "dev": "run-s clean dev:main",
+    "dev:main": "tsup --watch",
+    "build": "run-s clean build:main",
+    "build:main": "tsup",
+    "analyze": "run-s clean analyze:build analyze:generate analyze:open",
+    "analyze:build": "tsup --metafile",
+    "analyze:generate": "esbuild-visualizer --metadata ./dist/metafile-esm.json --filename ./dist/stats.html",
+    "analyze:open": "http-server ./dist -p 3000 -o ./stats.html",
+    "clean": "rimraf dist",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
@@ -28,7 +29,9 @@
     "stylelint": "stylelint **/*.css --ignore-path .gitignore"
   },
   "dependencies": {
-    "@ytk6565.net/domain": "workspace:*"
+    "@ytk6565.net/assets": "workspace:*",
+    "@ytk6565.net/domain": "workspace:*",
+    "@ytk6565.net/tailwindcss": "workspace:*"
   },
   "devDependencies": {
     "@mdx-js/react": "2.1.5",
@@ -54,23 +57,20 @@
     "@types/react-dom": "18.0.9",
     "@vitejs/plugin-react": "2.2.0",
     "@vitest/coverage-c8": "0.25.3",
-    "@ytk6565.net/assets": "workspace:*",
-    "@ytk6565.net/domain": "workspace:*",
     "@ytk6565.net/eslint-config-react": "workspace:*",
     "@ytk6565.net/stylelint-config-base": "workspace:*",
-    "@ytk6565.net/tailwindcss": "workspace:*",
     "@ytk6565.net/tsconfig": "workspace:*",
+    "esbuild-visualizer": "0.3.1",
     "eslint-plugin-storybook": "0.6.7",
     "happy-dom": "7.7.0",
+    "http-server": "14.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rollup-plugin-visualizer": "5.8.3",
+    "rimraf": "3.0.2",
     "storybook": "7.0.0-alpha.48",
     "stylelint": "14.15.0",
+    "tsup": "6.5.0",
     "typescript": "4.8.4",
-    "vite": "3.2.3",
-    "vite-plugin-eslint": "1.8.1",
-    "vite-plugin-fonts": "0.6.0",
     "vite-tsconfig-paths": "3.5.2",
     "vitest": "0.25.1"
   }
