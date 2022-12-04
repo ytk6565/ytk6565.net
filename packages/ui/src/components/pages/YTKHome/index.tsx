@@ -1,8 +1,15 @@
+import YTKArticleListItem from '@/components/molecules/YTKArticleListItem';
 import YTKSocialList from '@/components/organisms/YTKSocialList';
+import { ArticleItem } from '@ytk6565.net/domain/dist/Article';
 
 import type { FC } from 'react';
 
-const YTKHome: FC = () => (
+type Props = {
+  className?: string;
+  articleItems: ArticleItem[];
+};
+
+const YTKHome: FC<Props> = (props) => (
   <main className="pt-64 pb-64">
     <div className="container pr-24 pl-24">
       <h2 className="mb-16 text-center text-2xl">Yutaka Kaneko</h2>
@@ -50,6 +57,15 @@ const YTKHome: FC = () => (
           </ul>
         </section>
       </div>
+
+      <ul>
+        {props.articleItems.map((articleItem) => (
+          <YTKArticleListItem
+            key={articleItem.id}
+            articleItem={articleItem}
+          ></YTKArticleListItem>
+        ))}
+      </ul>
     </div>
   </main>
 );

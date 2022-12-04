@@ -27,6 +27,7 @@ module.exports = {
     spacing: {
       px: '1px',
       0: '0px',
+      4: rem(0.4),
       8: rem(0.8),
       16: rem(1.6),
       24: rem(2.4),
@@ -54,8 +55,8 @@ module.exports = {
       ],
     },
     fontSize: {
-      // xs: [rem(1.0), { lineHeight: 1.5 }],
-      // sm: [rem(1.4), { lineHeight: 1.5 }],
+      xs: [rem(1.2), { lineHeight: 1.5 }],
+      sm: [rem(1.4), { lineHeight: 1.5 }],
       base: [rem(1.6), { lineHeight: 1.5 }],
       lg: [rem(2.4), { lineHeight: 1.2 }],
       xl: [rem(3.2), { lineHeight: 1.2 }],

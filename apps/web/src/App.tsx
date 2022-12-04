@@ -1,20 +1,22 @@
 import '@ytk6565.net/tailwindcss/style';
 
+import { fetchBlogItems } from '@ytk6565.net/infrastructure/dist/Article/Blog';
 import YTKHome from '@ytk6565.net/ui/dist/components/pages/YTKHome';
-// import React, { Suspense } from 'react';
+import { useEffect, useState } from 'react';
 
+import type { ArticleItem } from '@ytk6565.net/domain/dist/Article';
 import type { FC } from 'react';
 
-// const YTKHome = React.lazy(
-//   () => import('@ytk6565.net/ui/dist/components/pages/YTKHome')
-// );
-
 const App: FC = () => {
-  return (
-    // <Suspense fallback={<div>Loading...</div>}>
-    <YTKHome />
-    // </Suspense>
-  );
+  const [articleItems, setArticleItems] = useState<ArticleItem[]>([]);
+
+  useEffect(() => {
+    fetchBlogItems().then((articleItems) => {
+      setArticleItems(articleItems);
+    });
+  }, []);
+
+  return <YTKHome articleItems={articleItems} />;
 };
 
 export default App;
