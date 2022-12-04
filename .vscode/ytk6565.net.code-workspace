@@ -33,6 +33,10 @@
       "path": "../packages/tailwindcss/"
     },
     {
+      "name": "esbuild config base",
+      "path": "../packages/esbuild-config-base/"
+    },
+    {
       "name": "TSConfig",
       "path": "../packages/tsconfig/"
     },
