@@ -10,9 +10,10 @@
     }
   },
   "scripts": {
-    "dev": "NODE_ENV=development dotenv -- npm-run-all --serial clean --parallel 'build:* --watch'",
+    "dev": "NODE_ENV=development run-s clean dev:main",
+    "dev:main": "run-p build:main 'build:types --watch' 'build:resolve-alias --watch'",
     "build": "NODE_ENV=production dotenv -- run-s clean build:*",
-    "build:main": "dotenv -- node ./esbuild.build.cjs",
+    "build:main": "dotenv -- node ./config/esbuild/build.cjs",
     "build:types": "tsc -p tsconfig.build.json",
     "build:resolve-alias": "tsc-alias -p tsconfig.build.json",
     "clean": "rimraf dist",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@contentful/rich-text-types": "15.14.1",
     "@vitest/coverage-c8": "0.25.3",
+    "@ytk6565.net/esbuild-config-base": "workspace:*",
     "@ytk6565.net/eslint-config-base": "workspace:*",
     "@ytk6565.net/tsconfig": "workspace:*",
     "contentful": "9.2.13",

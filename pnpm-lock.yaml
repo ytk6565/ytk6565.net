@@ -85,8 +85,10 @@ importers:
   packages/domain:
     specifiers:
       '@vitest/coverage-c8': 0.25.3
+      '@ytk6565.net/esbuild-config-base': workspace:*
       '@ytk6565.net/eslint-config-base': workspace:*
       '@ytk6565.net/tsconfig': workspace:*
+      esbuild: 0.15.17
       rimraf: 3.0.2
       tsc-alias: 1.7.1
       typescript: 4.8.4
@@ -94,13 +96,21 @@ importers:
       vitest: 0.25.1
     devDependencies:
       '@vitest/coverage-c8': 0.25.3
+      '@ytk6565.net/esbuild-config-base': link:../esbuild-config-base
       '@ytk6565.net/eslint-config-base': link:../eslint-config-base
       '@ytk6565.net/tsconfig': link:../tsconfig
+      esbuild: 0.15.17
       rimraf: 3.0.2
       tsc-alias: 1.7.1
       typescript: 4.8.4
       vite-tsconfig-paths: 3.5.2
       vitest: 0.25.1
+
+  packages/esbuild-config-base:
+    specifiers:
+      esbuild: 0.15.17
+    devDependencies:
+      esbuild: 0.15.17
 
   packages/eslint-config-base:
     specifiers:
@@ -143,6 +153,7 @@ importers:
       '@contentful/rich-text-types': 15.14.1
       '@vitest/coverage-c8': 0.25.3
       '@ytk6565.net/domain': workspace:*
+      '@ytk6565.net/esbuild-config-base': workspace:*
       '@ytk6565.net/eslint-config-base': workspace:*
       '@ytk6565.net/tsconfig': workspace:*
       contentful: 9.2.13
@@ -163,6 +174,7 @@ importers:
     devDependencies:
       '@contentful/rich-text-types': 15.14.1
       '@vitest/coverage-c8': 0.25.3_happy-dom@7.7.0
+      '@ytk6565.net/esbuild-config-base': link:../esbuild-config-base
       '@ytk6565.net/eslint-config-base': link:../eslint-config-base
       '@ytk6565.net/tsconfig': link:../tsconfig
       contentful: 9.2.13
@@ -233,12 +245,15 @@ importers:
       '@vitest/coverage-c8': 0.25.3
       '@ytk6565.net/assets': workspace:*
       '@ytk6565.net/domain': workspace:*
+      '@ytk6565.net/esbuild-config-base': workspace:*
       '@ytk6565.net/eslint-config-react': workspace:*
       '@ytk6565.net/stylelint-config-base': workspace:*
       '@ytk6565.net/tailwindcss': workspace:*
       '@ytk6565.net/tsconfig': workspace:*
+      esbuild: 0.15.17
       esbuild-visualizer: 0.3.1
       eslint-plugin-storybook: 0.6.7
+      glob: 8.0.3
       happy-dom: 7.7.0
       http-server: 14.1.1
       react: 18.2.0
@@ -246,7 +261,7 @@ importers:
       rimraf: 3.0.2
       storybook: 7.0.0-alpha.50
       stylelint: 14.15.0
-      tsup: 6.5.0
+      tsc-alias: 1.7.1
       typescript: 4.8.4
       vite-tsconfig-paths: 3.5.2
       vitest: 0.25.1
@@ -278,11 +293,14 @@ importers:
       '@types/react-dom': 18.0.9
       '@vitejs/plugin-react': 2.2.0
       '@vitest/coverage-c8': 0.25.3_happy-dom@7.7.0
+      '@ytk6565.net/esbuild-config-base': link:../esbuild-config-base
       '@ytk6565.net/eslint-config-react': link:../eslint-config-react
       '@ytk6565.net/stylelint-config-base': link:../stylelint-config-base
       '@ytk6565.net/tsconfig': link:../tsconfig
+      esbuild: 0.15.17
       esbuild-visualizer: 0.3.1
       eslint-plugin-storybook: 0.6.7_typescript@4.8.4
+      glob: 8.0.3
       happy-dom: 7.7.0
       http-server: 14.1.1
       react: 18.2.0
@@ -290,7 +308,7 @@ importers:
       rimraf: 3.0.2
       storybook: 7.0.0-alpha.50_yalvw3r2waubxycyb7k7qsruca
       stylelint: 14.15.0
-      tsup: 6.5.0_typescript@4.8.4
+      tsc-alias: 1.7.1
       typescript: 4.8.4
       vite-tsconfig-paths: 3.5.2
       vitest: 0.25.1_happy-dom@7.7.0
@@ -5044,16 +5062,6 @@ packages:
       ieee754: 1.2.1
     dev: true
 
-  /bundle-require/3.1.2_esbuild@0.15.17:
-    resolution: {integrity: sha512-Of6l6JBAxiyQ5axFxUM6dYeP/W7X2Sozeo/4EYB9sJhL+dqL7TKjg+shwxp6jlu/6ZSERfsYtIpSJ1/x3XkAEA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      esbuild: '>=0.13'
-    dependencies:
-      esbuild: 0.15.17
-      load-tsconfig: 0.2.3
-    dev: true
-
   /bytes/3.0.0:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
     engines: {node: '>= 0.8'}
@@ -5081,11 +5089,6 @@ packages:
       v8-to-istanbul: 9.0.1
       yargs: 16.2.0
       yargs-parser: 20.2.9
-    dev: true
-
-  /cac/6.7.14:
-    resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
-    engines: {node: '>=8'}
     dev: true
 
   /cache-base/1.0.1:
@@ -8617,11 +8620,6 @@ packages:
       supports-color: 8.1.1
     dev: true
 
-  /joycon/3.1.1:
-    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
-    engines: {node: '>=10'}
-    dev: true
-
   /js-levenshtein/1.1.6:
     resolution: {integrity: sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g==}
     engines: {node: '>=0.10.0'}
@@ -8850,6 +8848,7 @@ packages:
   /lilconfig/2.0.6:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
+    dev: false
 
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
@@ -8904,11 +8903,6 @@ packages:
       parse-json: 4.0.0
       pify: 3.0.0
       strip-bom: 3.0.0
-    dev: true
-
-  /load-tsconfig/0.2.3:
-    resolution: {integrity: sha512-iyT2MXws+dc2Wi6o3grCFtGXpeMvHmJqS27sMPGtV2eUu4PeFnG+33I8BlFK1t1NWMjOpcx9bridn5yxLDX2gQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
   /loader-utils/2.0.4:
@@ -8976,10 +8970,6 @@ packages:
 
   /lodash.snakecase/4.1.1:
     resolution: {integrity: sha512-QZ1d4xoBHYUeuouhEq3lk3Uq7ldgyFXGBhg04+oRLnIz8o9T65Eh+8YdroUwn846zchkA9yDsDl5CVVaV2nqYw==}
-    dev: true
-
-  /lodash.sortby/4.7.0:
-    resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
     dev: true
 
   /lodash.startcase/4.4.0:
@@ -10370,22 +10360,6 @@ packages:
       postcss: 8.4.19
     dev: false
 
-  /postcss-load-config/3.1.4:
-    resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
-    engines: {node: '>= 10'}
-    peerDependencies:
-      postcss: '>=8.0.9'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-      ts-node:
-        optional: true
-    dependencies:
-      lilconfig: 2.0.6
-      yaml: 1.10.2
-    dev: true
-
   /postcss-load-config/3.1.4_postcss@8.4.19:
     resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
     engines: {node: '>= 10'}
@@ -11428,13 +11402,6 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /source-map/0.8.0-beta.0:
-    resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
-    engines: {node: '>= 8'}
-    dependencies:
-      whatwg-url: 7.1.0
-    dev: true
-
   /sourcemap-codec/1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
@@ -12014,17 +11981,6 @@ packages:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
     dev: true
 
-  /tr46/1.0.1:
-    resolution: {integrity: sha512-dTpowEjclQ7Kgx5SdBkqRzVhERQXov8/l9Ft9dVM9fmg0W0KQSVaXX9T4i6twCPNtYiZM53lpSSUAwJbFPOHxA==}
-    dependencies:
-      punycode: 2.1.1
-    dev: true
-
-  /tree-kill/1.2.2:
-    resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
-    hasBin: true
-    dev: true
-
   /trim-lines/3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
     dev: true
@@ -12112,42 +12068,6 @@ packages:
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-
-  /tsup/6.5.0_typescript@4.8.4:
-    resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==}
-    engines: {node: '>=14'}
-    hasBin: true
-    peerDependencies:
-      '@swc/core': ^1
-      postcss: ^8.4.12
-      typescript: ^4.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      postcss:
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      bundle-require: 3.1.2_esbuild@0.15.17
-      cac: 6.7.14
-      chokidar: 3.5.3
-      debug: 4.3.4
-      esbuild: 0.15.17
-      execa: 5.1.1
-      globby: 11.1.0
-      joycon: 3.1.1
-      postcss-load-config: 3.1.4
-      resolve-from: 5.0.0
-      rollup: 2.79.1
-      source-map: 0.8.0-beta.0
-      sucrase: 3.29.0
-      tree-kill: 1.2.2
-      typescript: 4.8.4
-    transitivePeerDependencies:
-      - supports-color
-      - ts-node
-    dev: true
 
   /tsutils/3.21.0_typescript@4.8.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -12986,10 +12906,6 @@ packages:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
     dev: true
 
-  /webidl-conversions/4.0.2:
-    resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
-    dev: true
-
   /webidl-conversions/7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
     engines: {node: '>=12'}
@@ -13021,14 +12937,6 @@ packages:
     dependencies:
       tr46: 0.0.3
       webidl-conversions: 3.0.1
-    dev: true
-
-  /whatwg-url/7.1.0:
-    resolution: {integrity: sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==}
-    dependencies:
-      lodash.sortby: 4.7.0
-      tr46: 1.0.1
-      webidl-conversions: 4.0.2
     dev: true
 
   /which-boxed-primitive/1.0.2:
