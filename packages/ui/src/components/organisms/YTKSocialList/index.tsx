@@ -44,7 +44,7 @@ const links: Record<string, Link> = {
   },
 };
 
-const SocialList: FC<{ className: string }> = (props) => {
+const YTKSocialList: FC<{ className: string }> = (props) => {
   return (
     <ul
       className={`flex items-center justify-center -ml-8 -mr-8 ${props.className}`}
@@ -73,4 +73,4 @@ const SocialList: FC<{ className: string }> = (props) => {
   );
 };
 
-export default SocialList;
+export default YTKSocialList;

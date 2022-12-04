@@ -14,7 +14,7 @@ interface ButtonProps {
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * Button contents
+   * YTKButton contents
    */
   label: string;
   /**
@@ -26,7 +26,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+const YTKButton = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -50,4 +50,4 @@ export const Button = ({
   );
 };
 
-export default Button;
+export default YTKButton;

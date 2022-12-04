@@ -1,18 +1,18 @@
 import '@ytk6565.net/tailwindcss/style';
 
-import Home from '@ytk6565.net/ui/dist/components/pages/Home';
+import YTKHome from '@ytk6565.net/ui/dist/components/pages/YTKHome';
 // import React, { Suspense } from 'react';
 
 import type { FC } from 'react';
 
-// const Home = React.lazy(
-//   () => import('@ytk6565.net/ui/dist/components/pages/Home')
+// const YTKHome = React.lazy(
+//   () => import('@ytk6565.net/ui/dist/components/pages/YTKHome')
 // );
 
 const App: FC = () => {
   return (
     // <Suspense fallback={<div>Loading...</div>}>
-    <Home />
+    <YTKHome />
     // </Suspense>
   );
 };

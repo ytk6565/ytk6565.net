@@ -1,15 +1,15 @@
-import SocialList from '@/components/organisms/SocialList';
+import YTKSocialList from '@/components/organisms/YTKSocialList';
 
 import type { FC } from 'react';
 
-const Home: FC = () => (
+const YTKHome: FC = () => (
   <main className="pt-64 pb-64">
     <div className="container pr-24 pl-24">
       <h2 className="mb-16 text-center text-2xl">Yutaka Kaneko</h2>
 
       <p className="text-center text-gray">I am Front-End Engineer.</p>
 
-      <SocialList className="mt-48" />
+      <YTKSocialList className="mt-48" />
 
       <div className="mt-64">
         <section>
@@ -54,4 +54,4 @@ const Home: FC = () => (
   </main>
 );
 
-export default Home;
+export default YTKHome;
