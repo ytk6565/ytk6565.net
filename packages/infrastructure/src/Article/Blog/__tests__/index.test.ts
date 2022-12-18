@@ -4,10 +4,10 @@ process.env.CONTENTFUL_DELIVERY_TOKEN = 'xxxxxx';
 import { fetchBlog, fetchBlogItems } from '..';
 import { RESPONSE } from '../__mocks__';
 
-import type { MockType } from '@/__tests__/restHandlerFactory';
+import type { MockType } from '@@/tests/restHandlerFactory';
 
-import { restHandlerFactory } from '@/__tests__/restHandlerFactory';
-import { setupMockServer } from '@/__tests__/setupMockServer';
+import { restHandlerFactory } from '@@/tests/restHandlerFactory';
+import { setupMockServer } from '@@/tests/setupMockServer';
 
 describe('Article/Blog', () => {
   describe('fetchBlog', () => {
@@ -61,7 +61,6 @@ describe('Article/Blog', () => {
           title: 'ブログのタイトル',
           description: 'ブログの説明',
           body: 'ブログの本文',
-          thumbnail: undefined,
           permalink: '/articles/blogs/001',
           createdAt: '2022-11-29T12:34:56.120Z',
           updatedAt: '2022-11-29T12:34:56.120Z',
@@ -127,7 +126,6 @@ describe('Article/Blog', () => {
             id: '001',
             title: 'ブログのタイトル',
             description: 'ブログの説明',
-            thumbnail: undefined,
             permalink: '/articles/blogs/001',
             createdAt: '2022-11-29T12:34:56.120Z',
             updatedAt: '2022-11-29T12:34:56.120Z',

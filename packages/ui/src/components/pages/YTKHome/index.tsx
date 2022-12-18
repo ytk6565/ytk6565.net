@@ -1,16 +1,16 @@
 import YTKArticleListItem from '@/components/molecules/YTKArticleListItem';
 import YTKSocialList from '@/components/organisms/YTKSocialList';
-import { ArticleItem } from '@ytk6565.net/domain/dist/Article';
 
+import type { ArticleItem } from '@ytk6565.net/domain/dist/Article';
 import type { FC } from 'react';
 
 type Props = {
-  className?: string;
   articleItems: ArticleItem[];
+  className?: string;
 };
 
 const YTKHome: FC<Props> = (props) => (
-  <main className="pt-64 pb-64">
+  <main className={`pt-64 pb-64 ${props.className}`}>
     <div className="container pr-24 pl-24">
       <h2 className="mb-16 text-center text-2xl">Yutaka Kaneko</h2>
 
@@ -56,16 +56,21 @@ const YTKHome: FC<Props> = (props) => (
             </li>
           </ul>
         </section>
-      </div>
 
-      <ul>
-        {props.articleItems.map((articleItem) => (
-          <YTKArticleListItem
-            key={articleItem.id}
-            articleItem={articleItem}
-          ></YTKArticleListItem>
-        ))}
-      </ul>
+        <section>
+          <h2 className="mt-32 mb-16 text-xl">Articles</h2>
+
+          <ul className="-mt-16">
+            {props.articleItems.map((articleItem) => (
+              <YTKArticleListItem
+                key={articleItem.id}
+                articleItem={articleItem}
+                className="py-16 border-b border-gray"
+              />
+            ))}
+          </ul>
+        </section>
+      </div>
     </div>
   </main>
 );

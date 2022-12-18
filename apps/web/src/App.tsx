@@ -1,6 +1,7 @@
 import '@ytk6565.net/tailwindcss/style';
 
 import { fetchBlogItems } from '@ytk6565.net/infrastructure/dist/Article/Blog';
+import feedItems from '@ytk6565.net/infrastructure/dist/Article/Feed';
 import YTKHome from '@ytk6565.net/ui/dist/components/pages/YTKHome';
 import { useEffect, useState } from 'react';
 
@@ -11,8 +12,8 @@ const App: FC = () => {
   const [articleItems, setArticleItems] = useState<ArticleItem[]>([]);
 
   useEffect(() => {
-    fetchBlogItems().then((articleItems) => {
-      setArticleItems(articleItems);
+    fetchBlogItems().then((blogItems) => {
+      setArticleItems([...blogItems, ...feedItems]);
     });
   }, []);
 

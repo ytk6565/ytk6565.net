@@ -2,39 +2,31 @@ import type { ArticleItem } from '@ytk6565.net/domain/dist/Article';
 import type { FC } from 'react';
 
 type Props = {
-  className?: string;
   articleItem: ArticleItem;
+  className?: string;
 };
 
 const YTKArticleListItem: FC<Props> = (props) => {
-  const target =
-    props.articleItem.permalink.indexOf('http') === 0 ? '_blank' : '_self';
+  const isExternal = props.articleItem.permalink.indexOf('http') === 0;
+  const target = isExternal ? '_blank' : '_self';
 
   return (
     <li
-      className={`flex items-center justify-center max-w-xs p-16 shadow ${props.className}`}
+      className={`flex items-center justify-center max-w-md ${props.className}`}
     >
       <a
         href={props.articleItem.permalink}
         target={target}
         rel="noopener"
-        className={'btn-opacity block w-full'}
+        className={`btn-opacity block w-full ${
+          isExternal ? '' : 'pointer-events-none'
+        }`}
       >
-        <div
-          style={{
-            paddingTop: (630 / 1200) * 100 + '%',
-            backgroundImage: `url(${props.articleItem.thumbnail}`,
-          }}
-          className={'bg-no-repeat bg-cover'}
-        />
-
-        <h4 className="text-md font-normal mt-8">{props.articleItem.title}</h4>
+        <h4 className="text-md mt-8">{props.articleItem.title}</h4>
 
         <p className="text-xs text-gray mt-8">
           {props.articleItem.description}
         </p>
-
-        {/* <hr className='mt-8 mb-8 border-gray' /> */}
 
         <div className="text-xs text-gray mt-8">
           <div>created at {props.articleItem.createdAt}</div>

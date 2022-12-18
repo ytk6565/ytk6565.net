@@ -22,6 +22,8 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
+    "setup": "run-p generate-feed-items contentful-typescript-codegen",
+    "generate-feed-items": "ts-node --esm --experimental-specifier-resolution=node ./scripts/generateFeedItems.ts",
     "contentful-typescript-codegen": "dotenv -- node ./config/contentful/typescript-codegen/command.cjs --output src/types/generated/contentful.d.ts"
   },
   "dependencies": {
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@contentful/rich-text-types": "15.14.1",
+    "@types/fs-extra": "9.0.13",
     "@vitest/coverage-c8": "0.25.3",
     "@ytk6565.net/esbuild-config-base": "workspace:*",
     "@ytk6565.net/eslint-config-base": "workspace:*",
@@ -38,10 +41,13 @@
     "contentful-typescript-codegen": "3.3.0",
     "dotenv-cli": "6.0.0",
     "esbuild": "0.15.17",
+    "fs-extra": "11.1.0",
     "glob": "8.0.3",
     "happy-dom": "7.7.0",
     "msw": "0.49.0",
     "rimraf": "3.0.2",
+    "rss-parser": "3.12.0",
+    "ts-node": "10.9.1",
     "tsc-alias": "1.7.1",
     "typescript": "4.8.4",
     "vite-tsconfig-paths": "3.5.2",

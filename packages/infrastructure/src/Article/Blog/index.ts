@@ -19,15 +19,6 @@ type Blog = {
     title: Entry<IPostsFields>['fields']['title'];
     description: Entry<IPostsFields>['fields']['description'];
     body: Entry<IPostsFields>['fields']['body'];
-    thumbnail?: {
-      fields: {
-        file: {
-          url: NonNullable<
-            Entry<IPostsFields>['fields']['thumbnail']
-          >['fields']['file']['url'];
-        };
-      };
-    };
   };
 };
 
@@ -41,15 +32,6 @@ const blogSchema: z.ZodType<Blog> = z.object({
     title: z.string(),
     description: z.string(),
     body: z.string(),
-    thumbnail: z
-      .object({
-        fields: z.object({
-          file: z.object({
-            url: z.string(),
-          }),
-        }),
-      })
-      .optional(),
   }),
 });
 
@@ -64,7 +46,6 @@ const toArticle = (entry: Blog): Article => {
     title: entry.fields.title,
     description: entry.fields.description,
     body: entry.fields.body,
-    thumbnail: entry.fields.thumbnail?.fields.file.url,
     permalink: `/articles/blogs/${entry.sys.id}`,
     createdAt: entry.sys.createdAt,
     updatedAt: entry.sys.updatedAt,
@@ -81,7 +62,6 @@ const toArticleItem = (entry: Blog): ArticleItem => {
     id: entry.sys.id,
     title: entry.fields.title,
     description: entry.fields.description,
-    thumbnail: entry.fields.thumbnail?.fields.file.url,
     permalink: `/articles/blogs/${entry.sys.id}`,
     createdAt: entry.sys.createdAt,
     updatedAt: entry.sys.updatedAt,

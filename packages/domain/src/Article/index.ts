@@ -9,7 +9,6 @@ export const articleSchema = z.object({
   description: z.string(),
   body: z.string(),
   permalink: z.string(),
-  thumbnail: z.string().optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
 });
