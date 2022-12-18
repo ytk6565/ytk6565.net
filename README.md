@@ -11,7 +11,7 @@ $ pnpm i --frozen-lockfile
 
 ```bash
 # rebuild
-$ bash scripts/rebuild.sh
+$ bash shell-scripts/rebuild.sh
 ```
 
 ## Vercel
