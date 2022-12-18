@@ -111,7 +111,6 @@ module.exports = {
     textOpacity: false,
     textTransform: false,
     userSelect: false,
-    verticalAlign: false,
     visibility: false,
     whitespace: false,
     wordBreak: false,

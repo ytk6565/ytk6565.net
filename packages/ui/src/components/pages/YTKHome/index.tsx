@@ -1,8 +1,8 @@
-import YTKArticleListItem from '@/components/molecules/YTKArticleListItem';
-import YTKSocialList from '@/components/organisms/YTKSocialList';
-
 import type { ArticleItem } from '@ytk6565.net/domain/dist/Article';
 import type { FC } from 'react';
+
+import YTKArticleListItem from '@/components/molecules/YTKArticleListItem';
+import YTKSocialList from '@/components/organisms/YTKSocialList';
 
 type Props = {
   articleItems: ArticleItem[];
