@@ -27,3 +27,15 @@ export const toJST = (
   const jstDate = utcToZonedTime(utcDate, 'Asia/Tokyo');
   return format(jstDate, formatPattern);
 };
+
+/**
+ * 最新順に並べ替えるソート関数
+ * @param a 1 番目の要素
+ * @param b 2 番目の要素
+ * @returns ソート結果
+ */
+export const sortByNewest = (a: string, b: string) => {
+  const aDate = new Date(a);
+  const bDate = new Date(b);
+  return bDate.getTime() - aDate.getTime();
+};

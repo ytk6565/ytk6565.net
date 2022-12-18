@@ -1,4 +1,4 @@
-import { toJST, FORMAT_PATTERNS } from '..';
+import { FORMAT_PATTERNS, toJST, sortByNewest } from '..';
 
 describe('Date', () => {
   describe('toJST', () => {
@@ -25,6 +25,28 @@ describe('Date', () => {
       },
     ])('%s', ({ date, format, expected }) => {
       expect(toJST(date, format)).toBe(expected);
+    });
+  });
+
+  describe('sortByNewest', () => {
+    test.each([
+      {
+        a: '2022-11-29T17:02:43.120Z',
+        b: '2022-11-29T17:02:43.120Z',
+        expected: 0,
+      },
+      {
+        a: '2022-11-29T17:02:43.120Z',
+        b: '2022-11-29T17:02:43.121Z',
+        expected: -1,
+      },
+      {
+        a: '2022-11-29T17:02:43.121Z',
+        b: '2022-11-29T17:02:43.120Z',
+        expected: 1,
+      },
+    ])('%s', ({ a, b, expected }) => {
+      expect(sortByNewest(a, b)).toBe(expected);
     });
   });
 });

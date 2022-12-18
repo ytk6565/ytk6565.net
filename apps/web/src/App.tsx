@@ -1,5 +1,6 @@
 import '@ytk6565.net/tailwindcss/style';
 
+import { sortByNewest } from '@ytk6565.net/domain/dist/Date';
 import { fetchBlogItems } from '@ytk6565.net/infrastructure/dist/Article/Blog';
 import feedItems from '@ytk6565.net/infrastructure/dist/Article/Feed';
 import YTKHome from '@ytk6565.net/ui/dist/components/pages/YTKHome';
@@ -13,7 +14,10 @@ const App: FC = () => {
 
   useEffect(() => {
     fetchBlogItems().then((blogItems) => {
-      setArticleItems([...blogItems, ...feedItems]);
+      const articlesItems = [...blogItems, ...feedItems].sort(
+        ({ createdAt: a }, { createdAt: b }) => sortByNewest(a, b)
+      );
+      setArticleItems(articlesItems);
     });
   }, []);
 
