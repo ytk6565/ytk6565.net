@@ -29,8 +29,10 @@ const YTKArticleListItem: FC<Props> = (props) => {
         </p>
 
         <div className="text-xs text-gray mt-8">
-          <div>created at {props.articleItem.createdAt}</div>
-          <div>updated at {props.articleItem.updatedAt}</div>
+          <div>Created at {props.articleItem.createdAt}</div>
+          {props.articleItem.updatedAt && (
+            <div>Updated at {props.articleItem.updatedAt}</div>
+          )}
         </div>
       </a>
     </li>

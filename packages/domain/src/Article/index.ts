@@ -10,7 +10,7 @@ export const articleSchema = z.object({
   body: z.string(),
   permalink: z.string(),
   createdAt: z.string(),
-  updatedAt: z.string(),
+  updatedAt: z.string().optional(),
 });
 
 /**

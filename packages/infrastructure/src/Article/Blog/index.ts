@@ -1,3 +1,4 @@
+import { toJST } from '@ytk6565.net/domain/dist/Date';
 import z from 'zod';
 
 import type { IPostsFields } from '@/types/generated/contentful';
@@ -47,8 +48,8 @@ const toArticle = (entry: Blog): Article => {
     description: entry.fields.description,
     body: entry.fields.body,
     permalink: `/articles/blogs/${entry.sys.id}`,
-    createdAt: entry.sys.createdAt,
-    updatedAt: entry.sys.updatedAt,
+    createdAt: toJST(entry.sys.createdAt),
+    updatedAt: toJST(entry.sys.updatedAt),
   };
 };
 
@@ -63,8 +64,8 @@ const toArticleItem = (entry: Blog): ArticleItem => {
     title: entry.fields.title,
     description: entry.fields.description,
     permalink: `/articles/blogs/${entry.sys.id}`,
-    createdAt: entry.sys.createdAt,
-    updatedAt: entry.sys.updatedAt,
+    createdAt: toJST(entry.sys.createdAt),
+    updatedAt: toJST(entry.sys.updatedAt),
   };
 };
 

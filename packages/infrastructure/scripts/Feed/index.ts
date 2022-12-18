@@ -1,8 +1,7 @@
-import RSSParser from 'rss-parser';
+import { parser } from './lib';
 import z from 'zod';
 
-const rssParser = new RSSParser();
-
+import { toJST } from '@ytk6565.net/domain/dist/Date';
 import type {
   ArticleItem,
   FetchArticleItems,
@@ -44,7 +43,7 @@ const toArticleItem = (entry: FeedItem): ArticleItem => {
     title: entry.title,
     description: entry.contentSnippet,
     permalink: entry.link,
-    createdAt: entry.pubDate,
+    createdAt: toJST(entry.pubDate),
     updatedAt: '',
   };
 };
@@ -54,7 +53,7 @@ const toArticleItem = (entry: FeedItem): ArticleItem => {
  * @returns RSS の記事の一覧
  */
 export const fetchFeedItems: FetchArticleItems = async () => {
-  const feed = await rssParser.parseURL('https://zenn.dev/ytk6565/feed');
+  const feed = await parser.parseURL('https://zenn.dev/ytk6565/feed');
 
   const safeParseReturn = feedSchema.safeParse(feed);
   if (!safeParseReturn.success) {

@@ -62,8 +62,8 @@ describe('Article/Blog', () => {
           description: 'ブログの説明',
           body: 'ブログの本文',
           permalink: '/articles/blogs/001',
-          createdAt: '2022-11-29T12:34:56.120Z',
-          updatedAt: '2022-11-29T12:34:56.120Z',
+          createdAt: '2022-11-29',
+          updatedAt: '2022-11-29',
         });
       });
     });
@@ -127,8 +127,8 @@ describe('Article/Blog', () => {
             title: 'ブログのタイトル',
             description: 'ブログの説明',
             permalink: '/articles/blogs/001',
-            createdAt: '2022-11-29T12:34:56.120Z',
-            updatedAt: '2022-11-29T12:34:56.120Z',
+            createdAt: '2022-11-29',
+            updatedAt: '2022-11-29',
           },
         ]);
       });
