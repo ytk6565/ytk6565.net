@@ -1,9 +1,9 @@
 # @ytk6565.net/infrastructure
 
-## Contentful TypeScript Codegen
+## Setup
 
 ```bash
-$ pnpm --filter @ytk6565.net/infrastructure contentful-typescript-codegen
+$ pnpm --filter @ytk6565.net/infrastructure setup
 ```
 
 ## Format

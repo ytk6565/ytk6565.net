@@ -3,6 +3,8 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
+    "noEmit": false,
+    "emitDeclarationOnly": true,
     "declaration": true
   },
   "extends": "./tsconfig.json",

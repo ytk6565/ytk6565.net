@@ -67,43 +67,7 @@ module.exports = {
               'object',
               'type',
             ],
-            pathGroups: [
-              {
-                pattern: '@/pages/**',
-                group: 'parent',
-                position: 'after',
-              },
-              {
-                pattern: '@/components/**',
-                group: 'parent',
-                position: 'after',
-              },
-              {
-                pattern: '@/hooks/**',
-                group: 'parent',
-                position: 'after',
-              },
-              {
-                pattern: '@/infrastructure/**',
-                group: 'parent',
-                position: 'after',
-              },
-              {
-                pattern: '@/domain/**',
-                group: 'parent',
-                position: 'after',
-              },
-              {
-                pattern: '@/styles/**',
-                group: 'parent',
-                position: 'after',
-              },
-              {
-                pattern: '@/assets/**',
-                group: 'parent',
-                position: 'after',
-              },
-            ],
+            pathGroups: [],
             alphabetize: {
               order: 'asc',
             },
