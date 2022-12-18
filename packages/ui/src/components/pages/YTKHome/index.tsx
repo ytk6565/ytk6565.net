@@ -19,23 +19,16 @@ const YTKHome: FC<Props> = (props) => (
       <YTKSocialList className="mt-48" />
 
       <div className="mt-64">
+        {/* TODO: Contentful に移行 */}
         <section>
           <h2 className="mt-32 mb-16 text-xl">Skills</h2>
           <section>
             <h3 className="mt-16 mb-8 text-lg">Programing language</h3>
-            <p>HTML, CSS, JavaScript, TypeScript</p>
+            <p>TypeScript, JavaScript</p>
           </section>
           <section>
-            <h3 className="mt-16 mb-8 text-lg">Library</h3>
-            <p>Vue.js(Nuxt.js), Riot.js, Jest, Storybook</p>
-          </section>
-          <section>
-            <h3 className="mt-16 mb-8 text-lg">Platform</h3>
-            <p>Firebase</p>
-          </section>
-          <section>
-            <h3 className="mt-16 mb-8 text-lg">CMS</h3>
-            <p>WordPress</p>
+            <h3 className="mt-16 mb-8 text-lg">Library / Framework</h3>
+            <p>Vue.js, Jest, Cypress, Storybook</p>
           </section>
         </section>
 
