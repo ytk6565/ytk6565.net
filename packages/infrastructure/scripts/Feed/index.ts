@@ -1,11 +1,11 @@
 import { parser } from './lib';
 import z from 'zod';
 
-import { toJST } from '@ytk6565.net/domain/dist/Date';
 import type {
   ArticleItem,
   FetchArticleItems,
 } from '@ytk6565.net/domain/dist/Article';
+import { formatArticleItem } from '@ytk6565.net/domain/dist/Article';
 
 type FeedItem = {
   title: string;
@@ -43,7 +43,7 @@ const toArticleItem = (entry: FeedItem): ArticleItem => {
     title: entry.title,
     description: entry.contentSnippet,
     permalink: entry.link,
-    createdAt: toJST(entry.pubDate),
+    createdAt: entry.pubDate,
     updatedAt: '',
   };
 };
@@ -60,5 +60,5 @@ export const fetchFeedItems: FetchArticleItems = async () => {
     throw new Error('RSS の記事の一覧が不正です。');
   }
 
-  return safeParseReturn.data.items.map(toArticleItem);
+  return safeParseReturn.data.items.map(toArticleItem).map(formatArticleItem);
 };

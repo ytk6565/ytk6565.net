@@ -56,6 +56,7 @@ describe('Article/Blog', () => {
       test('レスポンスの Article の型を満たしているとき、データが返されるか', async () => {
         const response = await fetchBlog('001');
 
+        // TODO: 投稿アイテムのフォーマットが変わったらテストが落ちるので、データの取得と投稿アイテム型への変換のみをテストする
         expect(response).toEqual({
           id: '001',
           title: 'ブログのタイトル',
@@ -121,6 +122,7 @@ describe('Article/Blog', () => {
       test('レスポンスの Article の型を満たしているとき、データが返されるか', async () => {
         const response = await fetchBlogItems();
 
+        // TODO: 投稿アイテムのフォーマットが変わったらテストが落ちるので、データの取得と投稿アイテム型への変換のみをテストする
         expect(response).toEqual([
           {
             id: '001',

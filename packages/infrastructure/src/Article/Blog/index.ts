@@ -1,4 +1,7 @@
-import { toJST } from '@ytk6565.net/domain/dist/Date';
+import {
+  formatArticle,
+  formatArticleItem,
+} from '@ytk6565.net/domain/dist/Article';
 import z from 'zod';
 
 import type { IPostsFields } from '@/types/generated/contentful';
@@ -48,8 +51,8 @@ const toArticle = (entry: Blog): Article => {
     description: entry.fields.description,
     body: entry.fields.body,
     permalink: `/articles/blogs/${entry.sys.id}`,
-    createdAt: toJST(entry.sys.createdAt),
-    updatedAt: toJST(entry.sys.updatedAt),
+    createdAt: entry.sys.createdAt,
+    updatedAt: entry.sys.updatedAt,
   };
 };
 
@@ -64,8 +67,8 @@ const toArticleItem = (entry: Blog): ArticleItem => {
     title: entry.fields.title,
     description: entry.fields.description,
     permalink: `/articles/blogs/${entry.sys.id}`,
-    createdAt: toJST(entry.sys.createdAt),
-    updatedAt: toJST(entry.sys.updatedAt),
+    createdAt: entry.sys.createdAt,
+    updatedAt: entry.sys.updatedAt,
   };
 };
 
@@ -109,7 +112,7 @@ export const fetchBlog: FetchArticle = async (id) => {
     throw new Error('ブログの記事が不正です。');
   }
 
-  return toArticle(safeParseReturn.data);
+  return formatArticle(toArticle(safeParseReturn.data));
 };
 
 /**
@@ -131,7 +134,7 @@ export const fetchBlogItems: FetchArticleItems = async () => {
       throw new Error('ブログの記事の一覧が不正です。');
     }
 
-    items.push(toArticleItem(safeParseReturn.data));
+    items.push(formatArticleItem(toArticleItem(safeParseReturn.data)));
   }
 
   return items;

@@ -38,12 +38,12 @@ describe('Date', () => {
       {
         a: '2022-11-29T17:02:43.120Z',
         b: '2022-11-29T17:02:43.121Z',
-        expected: -1,
+        expected: 1,
       },
       {
         a: '2022-11-29T17:02:43.121Z',
         b: '2022-11-29T17:02:43.120Z',
-        expected: 1,
+        expected: -1,
       },
     ])('%s', ({ a, b, expected }) => {
       expect(sortByNewest(a, b)).toBe(expected);

@@ -2,7 +2,7 @@
   {
     "id": "hammerspoon-switch-input-source",
     "title": "Hammerspoon で英数・かなの切り替えを行う",
-    "description": "はじめに\nUS配列のMacBook Proを利用しているのですがJIS配列と同じようにスペースキーの左右のキー（US配列では command キー）で入力ソース（英数・かな）の切り替えのために Hammerspoon を利用しているので設定と試したことをまとめる\n\n 前提\n\nmacOS Monterey 12.4 を利用\nターミナルのアプリケーションに kitty を利用\nHammerspoon, kitty のインストール方法は記載しない\n\n\n 1. 左右の command キーを押したときに、「英数キー」「かなキー」を押すイベントを実行する\nHammerspoon の設定ファイル...",
+    "description": "はじめに\nUS配列のMacBook Proを利用しているのですがJIS配列と同じようにスペースキーの左右のキー（US配列では command キー）で入力ソース（英数・かな）の切り替えのために Ham...",
     "permalink": "https://zenn.dev/ytk6565/articles/hammerspoon-switch-input-source",
     "createdAt": "2022-06-16",
     "updatedAt": ""
@@ -10,7 +10,7 @@
   {
     "id": "aws-billing-daily-report",
     "title": "AWSの請求レポートを毎日Slackに通知",
-    "description": "はじめに\n個人で AWS を利用していて\n\n毎日どれくらいのコストがかかっているのか把握したい\nコストが多くかかっているリソースに早く気付きたい\nコストに意識を向けたい\n\nといったモチベーションが生まれたため AWS の請求レポートを毎日 Slack に通知する Lambda 関数を開発しました。\nGiHub に リポジトリ を公開しておりますので参考にしていただけましたら幸いです。\n\n 前提\n\nSlack のワークスペース、レポート用のチャンネルは用意済みの想定で書いております。\nServerless Framework の CLIをインストール済みの想定で書いております。\nNod...",
+    "description": "はじめに\n個人で AWS を利用していて\n\n毎日どれくらいのコストがかかっているのか把握したい\nコストが多くかかっているリソースに早く気付きたい\nコストに意識を向けたい\n\nといったモチベーションが生ま...",
     "permalink": "https://zenn.dev/ytk6565/articles/aws-billing-daily-report",
     "createdAt": "2021-01-23",
     "updatedAt": ""
@@ -18,7 +18,7 @@
   {
     "id": "swiper-effect-fade",
     "title": "Swiper の effect: fade でスライドが重なる",
-    "description": "はじめに\nSwiper というスライダーライブラリでフェードエフェクトを利用した際に、\nアクティブ以外のスライドも重なって見えてしまう問題に対応したためメモとしてまとめます。\n\n 原因\n公式のデモ では background-size: cover; のためとくに問題なく表示されておりますが、\nimg タグや background-size: contain; などの場合は縦横比が統一されない可能性があるためスライドが重なって見えてしまいます。\n\n 解決方法\n解決方法は非常に簡単で下記のようにオプションを設定することです。\nfadeEffect: { crossFade: true ...",
+    "description": "はじめに\nSwiper というスライダーライブラリでフェードエフェクトを利用した際に、\nアクティブ以外のスライドも重なって見えてしまう問題に対応したためメモとしてまとめます。\n\n 原因\n公式のデモ で...",
     "permalink": "https://zenn.dev/ytk6565/articles/swiper-effect-fade",
     "createdAt": "2021-01-23",
     "updatedAt": ""
@@ -26,7 +26,7 @@
   {
     "id": "github-accounts-based-on-directories",
     "title": "ディレクトリベースで GitHub アカウントを切り替える",
-    "description": "はじめに\n初めて Zenn に投稿します。宜しくお願いいたします。\n会社用と個人用など複数の GitHub アカウントを利用中に\n\n\n~/.ssh/config に独自のホストを指定して SSH キーを切り替えているがリポジトリを設定する際にホストを変更するのが面倒。\n誤ったアカウントでコミットしてしまった。\n自身のコミットを証明できない。\n\nなどの問題に直面したため、解決方法をまとめることにしました。\n\n 前提\n\nmacOS を利用しております。他の OS をご利用の場合は適宜お読み替えください。\nGitHub を利用している方を想定して書いております。\ngit のバージョンは 2...",
+    "description": "はじめに\n初めて Zenn に投稿します。宜しくお願いいたします。\n会社用と個人用など複数の GitHub アカウントを利用中に\n\n\n~/.ssh/config に独自のホストを指定して SSH キー...",
     "permalink": "https://zenn.dev/ytk6565/articles/github-accounts-based-on-directories",
     "createdAt": "2021-01-13",
     "updatedAt": ""
