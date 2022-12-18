@@ -30,9 +30,9 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "dev": "turbo run dev --parallel",
-    "prepare": "run-p husky setup",
+    "prepare": "run-p husky initialize",
     "husky": "husky install",
-    "setup": "pnpm --filter @ytk6565.net/infrastructure setup"
+    "initialize": "pnpm --filter @ytk6565.net/infrastructure run initialize"
   },
   "devDependencies": {
     "@commitlint/cli": "17.2.0",
