@@ -22,8 +22,8 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --ext .js,.ts,.tsx, --ignore-path .gitignore .",
-    "initialize": "run-p generate-feed-items contentful-typescript-codegen",
-    "generate-feed-items": "ts-node --esm --experimental-specifier-resolution=node ./scripts/generateFeedItems.ts",
+    "initialize": "run-p generate-feed contentful-typescript-codegen",
+    "generate-feed": "ts-node --esm --experimental-specifier-resolution=node ./scripts/generateFeed.ts",
     "contentful-typescript-codegen": "dotenv -- node ./config/contentful/typescript-codegen/command.cjs --output src/types/generated/contentful.d.ts"
   },
   "dependencies": {
