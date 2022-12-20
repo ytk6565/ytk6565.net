@@ -31,5 +31,3 @@ export const fetchFeed: FetchFeed = async () => {
 
   return safeParseReturn.data;
 };
-
-fetchFeed();
