@@ -13,7 +13,7 @@ describe('String', () => {
         length: 9,
         expected: '123456789...',
       },
-    ])('%s', ({ str, length, expected }) => {
+    ])('trim("$str", $length)', ({ str, length, expected }) => {
       expect(trim(str, length)).toBe(expected);
     });
   });

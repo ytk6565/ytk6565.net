@@ -47,7 +47,7 @@ describe('Article', () => {
           updatedAt: '2022-11-29',
         },
       },
-    ])('%s', ({ article, expected }) => {
+    ])('Article 型がフォーマットされること', ({ article, expected }) => {
       const result = formatArticle(article);
       expect(result).toEqual(expected);
     });
@@ -95,9 +95,12 @@ describe('Article', () => {
           updatedAt: '2022-11-29',
         },
       },
-    ])('%s', ({ articleItem, expected }) => {
-      const result = formatArticleItem(articleItem);
-      expect(result).toEqual(expected);
-    });
+    ])(
+      'ArticleItem 型がフォーマットされること',
+      ({ articleItem, expected }) => {
+        const result = formatArticleItem(articleItem);
+        expect(result).toEqual(expected);
+      }
+    );
   });
 });
