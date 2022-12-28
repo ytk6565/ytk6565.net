@@ -23,7 +23,7 @@ describe('Date', () => {
         format: FORMAT_PATTERNS.DATETIME,
         expected: '2022-06-16 00:28:03',
       },
-    ])('%s', ({ date, format, expected }) => {
+    ])('toJST("$date")', ({ date, format, expected }) => {
       expect(toJST(date, format)).toBe(expected);
     });
   });
@@ -45,7 +45,7 @@ describe('Date', () => {
         b: '2022-11-29T17:02:43.120Z',
         expected: -1,
       },
-    ])('%s', ({ a, b, expected }) => {
+    ])('sortByNewest("$a", "$b")', ({ a, b, expected }) => {
       expect(sortByNewest(a, b)).toBe(expected);
     });
   });

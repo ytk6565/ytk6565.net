@@ -53,7 +53,7 @@ describe('Article/Blog', () => {
         expect(url).toMatch(/entries\/001/);
       });
 
-      test('レスポンスの Article の型を満たしているとき、データが返されるか', async () => {
+      test('レスポンスが Article の型を満たしているとき、データが返されるか', async () => {
         const response = await fetchBlog('001');
 
         // TODO: 投稿アイテムのフォーマットが変わったらテストが落ちるので、データの取得と投稿アイテム型への変換のみをテストする
@@ -70,7 +70,7 @@ describe('Article/Blog', () => {
     });
 
     describe('異常系', () => {
-      test('レスポンスの Article の型を満たしていないとき、エラーがスローされるか', async () => {
+      test('レスポンスが Article の型を満たしていないとき、エラーがスローされるか', async () => {
         server.use(fetchBlogHandler({ data: {}, mock: fetchBlogResponseMock }));
 
         expect.hasAssertions();
@@ -119,7 +119,7 @@ describe('Article/Blog', () => {
         expect(headers.get('Authorization')).toBe('Bearer xxxxxx');
       });
 
-      test('レスポンスの Article の型を満たしているとき、データが返されるか', async () => {
+      test('レスポンスが Article の型を満たしているとき、データが返されるか', async () => {
         const response = await fetchBlogItems();
 
         // TODO: 投稿アイテムのフォーマットが変わったらテストが落ちるので、データの取得と投稿アイテム型への変換のみをテストする
@@ -137,7 +137,7 @@ describe('Article/Blog', () => {
     });
 
     describe('異常系', () => {
-      test('レスポンスの Article の型を満たしていないとき、エラーがスローされるか', async () => {
+      test('レスポンスが Article の型を満たしていないとき、エラーがスローされるか', async () => {
         server.use(
           fetchBlogItemsHandler({
             data: {},

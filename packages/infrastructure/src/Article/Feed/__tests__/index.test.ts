@@ -3,7 +3,7 @@ import { toArticleItem } from '..';
 describe('Article/Feed', () => {
   describe('toArticleItem', () => {
     describe('正常系', () => {
-      test('レスポンスの Article の型を満たしているとき、データが返されるか', async () => {
+      test('FeedItem 型から Article 型に変換されるか', async () => {
         const result = toArticleItem({
           title: 'Hammerspoon で英数・かなの切り替えを行う',
           link: 'https://zenn.dev/ytk6565/articles/hammerspoon-switch-input-source',

@@ -1,9 +1,9 @@
 # @ytk6565.net/infrastructure
 
-## Setup
+## Initialize
 
 ```bash
-$ pnpm --filter @ytk6565.net/infrastructure setup
+$ pnpm --filter @ytk6565.net/infrastructure initialize
 ```
 
 ## Format

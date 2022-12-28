@@ -18,7 +18,7 @@ describe('Article/Feed', () => {
           .mockImplementation(async () => RESPONSE as unknown as any);
       });
 
-      test('レスポンスの Article の型を満たしているとき、データが返されるか', async () => {
+      test('レスポンスが Feed の型を満たしているとき、データが返されるか', async () => {
         const response = await fetchFeed();
 
         expect(response).toEqual({
@@ -41,7 +41,7 @@ describe('Article/Feed', () => {
         mockParseURL.mockImplementation(async () => ({} as unknown as any));
       });
 
-      test('レスポンスの Article の型を満たしていないとき、エラーがスローされるか', async () => {
+      test('レスポンスが Feed の型を満たしていないとき、エラーがスローされるか', async () => {
         expect.hasAssertions();
 
         await expect(fetchFeed()).rejects.toThrow();
