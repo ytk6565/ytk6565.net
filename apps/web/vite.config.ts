@@ -35,9 +35,7 @@ export default defineConfig(({ mode }) => ({
       },
     }),
     VitePluginRadar({
-      analytics: {
-        id: 'UA-186919639-2',
-      },
+      analytics: [{ id: 'UA-186919639-3' }, { id: 'G-56DM5BZZ30' }],
     }),
     tsconfigPaths(),
   ],
